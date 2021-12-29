@@ -1,0 +1,30 @@
+.audio-gear {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-gear-title {
+    width: 70%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 1.43px;
+    line-height: 44px;
+    margin-bottom: 1rem;
+}
+
+.audio-gear-about {
+    width: 78%;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.highlight {
+    color: #de7d4a;
+}
+
+.audio-gear-photo img {
+    border-radius: 8px;
+}

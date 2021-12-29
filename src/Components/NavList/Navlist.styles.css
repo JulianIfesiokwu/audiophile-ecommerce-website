@@ -1,0 +1,15 @@
+.navlist {
+    list-style-type: none;
+    display: flex;
+}
+
+.navlist li {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+li:nth-child(4) {
+    margin-right: 0;
+}

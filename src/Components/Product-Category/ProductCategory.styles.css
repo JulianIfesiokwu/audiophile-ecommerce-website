@@ -1,0 +1,6 @@
+.product-category {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    padding-top: 5rem;
+}

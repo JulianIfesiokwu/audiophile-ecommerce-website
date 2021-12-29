@@ -1,0 +1,41 @@
+.footer {
+    margin-top: 4rem;
+    color: white;
+    background-color: black;
+    padding: 2rem 5rem 1.5rem 5rem;
+}
+
+.row-one, .row-two, .row-three {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.audiophile-footer-text {
+    width: 48%;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.social_media {
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+}

@@ -1,0 +1,22 @@
+.navigation {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333333;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.shopping-cart {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
