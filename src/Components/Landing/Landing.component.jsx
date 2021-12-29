@@ -1,5 +1,4 @@
 import React from "react";
-import Navigation from "../Navigation/Navigation.component";
 import Button from "../Button/Button.component";
 
 import './Landing.styles.css';
@@ -7,7 +6,6 @@ import './Landing.styles.css';
 const Landing = () => {
     return (
         <div className="landing">
-            <Navigation />
             <div className="landing-section">
                 <div className="landing-details">
                     <p className="product-intro">new product</p>

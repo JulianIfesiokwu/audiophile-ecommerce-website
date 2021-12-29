@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="social_media">
                     <Facebook className="icon"/>
                     <Twitter className="icon"/>
-                    <Instagram />
+                    <Instagram className="icon" />
                 </div>
 
             </div>

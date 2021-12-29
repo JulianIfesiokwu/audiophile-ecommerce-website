@@ -1,7 +1,12 @@
 .button {
-    padding: 0.5rem;
+    padding: 1rem;
     text-transform: uppercase;
     cursor: pointer;
     width: auto;
     align-self: flex-start;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
