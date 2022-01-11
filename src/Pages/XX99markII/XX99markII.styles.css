@@ -64,7 +64,7 @@
 
 .image-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 40% auto;
     grid-template-rows: auto auto;
     gap: 3%;
     margin-bottom: 5rem;

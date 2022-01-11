@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from '../Button/Button.component';
 import earphone from '../../assets/home/desktop/image-earphones-yx1.jpg';
 import zx9Speaker from '../../assets/home/desktop/image-speaker-zx9.png';
@@ -18,7 +19,10 @@ const PremiumProducts = () => {
                     <p className="zx9-info">
                         Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                     </p>
-                    <Button className="zx9-button">see product</Button>
+                    <Link to="/speakers/ZX9">
+                        <Button className="zx9-button">see product</Button>
+                    </Link>
+                    
                 </div>
             </div>
 
