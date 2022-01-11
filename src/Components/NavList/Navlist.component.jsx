@@ -7,7 +7,7 @@ import './Navlist.styles.css';
 const NavList = () => {
     return (
         <ul className="navlist">
-            <Link className="link" to="/home">
+            <Link className="link" to="/">
                 <li>HOME</li>
             </Link>
             <Link className="link" to="/headphones">

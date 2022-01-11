@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button.component";
+import { Link } from "react-router-dom";
 
 import './Landing.styles.css';
 
@@ -16,7 +17,9 @@ const Landing = () => {
                     Experience natural, lifelike audio and exceptional               
                      build quality made for the passionate music enthusiast.
                     </p>
-                    <Button className="landing-button">SEE PRODUCT</Button>
+                    <Link to="/headphones/XX99markII">
+                        <Button className="landing-button">SEE PRODUCT</Button>
+                    </Link>
                     
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .headphones-main {
     margin-top: 4rem;
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 7rem;
 }
 
 .headphones-landing {
@@ -53,7 +53,7 @@
     line-height: 44px;
     letter-spacing: 1.43px;
     text-transform: uppercase;
-    width: 50%;
+    width: 80%;
     margin-bottom: 1rem;
 }
 
@@ -64,9 +64,4 @@
     line-height: 25px;
     width: 83%;
     margin-bottom: 1rem;
-}
-
-Button {
-    color: white;
-    background-color: #d87d4a;
 }
