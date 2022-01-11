@@ -28,7 +28,9 @@ const PremiumProducts = () => {
 
             <div className="zx7-speaker">
                 <h2 className="zx7-name">zx7 speaker</h2>
-                <Button>see product</Button>
+                <Link to="/speakers/ZX7">
+                    <Button>see product</Button>
+                </Link>
             </div>
 
             <div className="earphones">
@@ -38,7 +40,9 @@ const PremiumProducts = () => {
 
                 <div className="earphone-link">
                     <h2 className="yx1-name">yx1 earphones</h2>
-                    <Button>see product</Button>
+                    <Link to="/earphones/YX1">
+                        <Button>see product</Button>
+                    </Link>
                 </div>
             </div>
 

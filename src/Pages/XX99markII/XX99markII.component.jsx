@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button.component";
 import xx99 from '../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg';
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
@@ -99,17 +100,26 @@ const XX99markII = () => {
                     <div className="similar-link">
                         <img src={xx99thumbnail} alt="xx99" />
                         <p className="link-name">xx99 mark i</p>
+                        <Link to="/headphones/XX99markI">
                         <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                     <div className="similar-link">
                         <img src={xx59thumbnail} alt="" />
                         <p className="link-name">xx59</p>
+                        <Link to="/headphones/XX59">
                         <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                     <div className="similar-link">
                         <img src={zx9thumbnail} alt="" />
                         <p className="link-name">zx9 speaker</p>
+                        <Link to="/speakers/ZX9">
                         <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>

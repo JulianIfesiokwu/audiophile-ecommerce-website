@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import Button from "../../Components/Button/Button.component";
@@ -21,7 +22,9 @@ const EarphonesCategory = () => {
                         <p className="xx99-product-details">
                         Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.
                         </p>
+                        <Link to="/earphones/YX1">
                         <Button>see product</Button>
+                        </Link>
                     </div>
                 </div>
 

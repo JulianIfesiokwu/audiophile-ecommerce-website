@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import Button from "../../Components/Button/Button.component";
@@ -26,7 +27,10 @@ const HeadphonesCategory = () => {
                         <p className="xx99-product-details">
                         The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                         </p>
-                        <Button>see product</Button>
+                        <Link to="/headphones/XX99markII">
+                            <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                 </div>
 
@@ -38,7 +42,10 @@ const HeadphonesCategory = () => {
                         <p className="xx99m1-product-details">
                         As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.
                         </p>
-                        <Button>see product</Button>
+                        <Link to="/headphones/XX99markI">
+                            <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                     <div className="img-container">
                         <img src={xx99m1} alt="" />
@@ -55,7 +62,10 @@ const HeadphonesCategory = () => {
                         <p className="xx59-product-details">
                         Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
                         </p>
-                        <Button>see product</Button>
+                        <Link to="/headphones/XX59">
+                            <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                 </div>
 
