@@ -14,6 +14,7 @@ import XX59 from './Pages/XX59/XX59.component';
 import ZX9 from './Pages/ZX9/ZX9.component';
 import ZX7 from './Pages/ZX7/ZX7.component';
 import YX1 from './Pages/YX1/YX1.component';
+import Checkout from './Pages/CheckoutPage/Checkout.component';
 import ErrorPage from './Pages/ErrorPage/ErrorPage.component';
 import ScrollToTop from './Components/ScrollToTop.component';
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/earphones" element={<EarphonesCategory />} />
           <Route path="YX1" element={<YX1 />} />
         </Route>
+        <Route path="/checkout" element={<Checkout />} />
         <Route
       path="*"
       element={ <ErrorPage /> }
