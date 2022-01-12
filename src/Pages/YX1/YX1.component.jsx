@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button/Button.component";
 import YX1image from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
@@ -13,10 +13,12 @@ import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
 const YX1 = () => {
+    const navigate = useNavigate();
+
     return (
 
         <div className="headphones-main">
-        <Button>go back</Button>
+        <button onClick={() => navigate(-1)}>Go Back</button>
 
             <div className="headphones-row-one">
                 <div className="img-container">

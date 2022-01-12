@@ -1,0 +1,15 @@
+.error {
+    text-align: center;
+    padding: 8rem;
+    text-transform: uppercase;
+}
+
+.error-title {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: 2px;
+}

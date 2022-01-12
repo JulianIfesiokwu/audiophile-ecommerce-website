@@ -11,19 +11,13 @@ import earphonesImage from '../../assets/shared/desktop/image-category-thumbnail
 const ProductCategory = () => {
     return (
         <div className="product-category">
-            <Link to="/headphones"
-            style={{ textDecoration: 'none' }}
-            >
+            <Link to="/headphones">
                 <ProductLink title="Headphones" linkImage={headPhonesImage} />
             </Link>
-            <Link to="/speakers"
-            style={{ textDecoration: 'none' }}
-            >
+            <Link to="/speakers" >
                 <ProductLink title="Speakers" linkImage={speakerImage} />
             </Link>
-            <Link to="/earphones"
-            style={{ textDecoration: 'none' }}
-            >
+            <Link to="/earphones">
                 <ProductLink title="Earphones" linkImage={earphonesImage} />
             </Link>
         </div>

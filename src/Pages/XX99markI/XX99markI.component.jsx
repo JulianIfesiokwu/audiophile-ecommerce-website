@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button/Button.component";
 import xx99 from "../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
@@ -12,10 +13,12 @@ import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
 const XX99markI = () => {
+    const navigate = useNavigate();
+
     return (
 
         <div className="headphones-main">
-        <Button>go back</Button>
+        <button onClick={() => navigate(-1)}>Go Back</button>
 
             <div className="headphones-row-one">
                 <div className="img-container">
@@ -90,17 +93,24 @@ const XX99markI = () => {
                     <div className="similar-link">
                         <img src={xx99thumbnail} alt="xx99" />
                         <p className="link-name">xx99 mark ii</p>
+                        <Link to="/headphones/XX99markII">
                         <Button>see product</Button>
+                        </Link>
+                        
                     </div>
                     <div className="similar-link">
                         <img src={xx59thumbnail} alt="" />
                         <p className="link-name">xx59</p>
+                        <Link to="/headphones/XX59">
                         <Button>see product</Button>
+                        </Link>
                     </div>
                     <div className="similar-link">
                         <img src={zx9thumbnail} alt="" />
                         <p className="link-name">zx9 speaker</p>
+                        <Link to="/speakers/ZX9">
                         <Button>see product</Button>
+                        </Link>
                     </div>
                 </div>
             </div>

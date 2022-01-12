@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../Components/Button/Button.component";
 import xx99 from '../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg';
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
@@ -15,10 +15,12 @@ import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 import "./XX99markII.styles.css";
 
 const XX99markII = () => {
+    const navigate = useNavigate()
+
     return (
 
         <div className="headphones-main">
-        <Button>go back</Button>
+        <button onClick={() => navigate(-1)}>Go Back</button>
 
             <div className="headphones-row-one">
                 <div className="img-container">

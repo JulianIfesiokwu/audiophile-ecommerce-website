@@ -11,3 +11,23 @@ body {
 .app {
     width: 100%;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 1rem 1rem 1rem 0;
+    margin-bottom: 2rem;
+    font-size: 15px;
+    line-height: 25px;
+    cursor: pointer;
+}
