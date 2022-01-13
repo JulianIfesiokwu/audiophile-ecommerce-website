@@ -43,7 +43,7 @@ const Navigation = () => {
                 </button>
             </Link>           
             
-            </Modal>         
+            </Modal>    
             
         </div>
     )
