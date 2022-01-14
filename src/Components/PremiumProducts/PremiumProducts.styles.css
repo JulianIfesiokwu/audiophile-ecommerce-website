@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     height: 60vh;
-    padding: 2rem;
+    padding: 3rem;
     width: 100%;
     background-color: #D87D4A;
     border-radius: 8px;
@@ -46,6 +46,20 @@
     margin-bottom: 1rem;
 }
 
+.zx9-button {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.zx9-button:hover {
+    background-color: #4C4C4C;
+    color: #FFFFFF;
+}
+
 .zx7-speaker {
     width: 100%;
     padding: 5rem;
@@ -64,6 +78,21 @@
     letter-spacing: 2px;
     font-size: 28px;
     margin-bottom: 2rem;
+}
+
+.zx7-button, .yx-1-button {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #000000;
+}
+
+.zx7-button:hover, .yx-1-button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .earphones {

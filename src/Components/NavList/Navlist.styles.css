@@ -14,3 +14,6 @@
     letter-spacing: 3px;
     font-size: 14px;
 }
+.navlist li:hover {
+    color: #d87d4a;
+}

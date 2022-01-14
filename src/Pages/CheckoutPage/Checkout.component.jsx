@@ -21,15 +21,15 @@ const Checkout =  () => {
                             <h2 className="section-title">billing details</h2>
                             <div className="section-field">
                                 <div className="field">
-                                    <label htmlFor="name">name</label>
+                                    <label htmlFor="name">Name</label>
                                     <input type="text" placeholder="Alexei Ward" id="name"/>
                                 </div>
                                 <div className="field">
-                                    <label htmlFor="email">email</label>
+                                    <label htmlFor="email">Email</label>
                                     <input type="email" placeholder="alexei@mail.com" id="email"/>
                                 </div>
                                 <div className="field">
-                                    <label htmlFor="phone">phone number</label>
+                                    <label htmlFor="phone">Phone Number</label>
                                     <input type="number" placeholder="+1 202-555-0136" id="phone"/>
                                 </div>
 
@@ -39,15 +39,15 @@ const Checkout =  () => {
                             <h2 className="section-title">shipping info</h2>
                             <div className="section-field">
                                 <div className="field" id="address">
-                                    <label htmlFor="name">address</label>
+                                    <label htmlFor="name">Address</label>
                                     <input type="text" placeholder="1137 Williams Avenue" id="address"/>
                                 </div>
                                 <div className="field">
-                                    <label htmlFor="zip code">zip code</label>
+                                    <label htmlFor="zip code">Zip Code</label>
                                     <input type="number" placeholder="10001" id="zip code"/>
                                 </div>
                                 <div className="field">
-                                    <label htmlFor="city">city</label>
+                                    <label htmlFor="city">City</label>
                                     <input type="text" placeholder="New York" id="city"/>
                                 </div>
                                 <div className="field">
@@ -61,21 +61,29 @@ const Checkout =  () => {
                             <h2 className="section-title">payment details</h2>
                             <div className="section-field">
                                 <div className="section-row-one">
-                                    <p className="payment-method">payment method</p>
+                                    <p className="payment-method">Payment Method</p>
                                     <div className="radio-fields">
-                                        <input type="radio" name="payment-type"/>
-                                        <label htmlFor="e-money">e-Money</label>
-                                        <input type="radio" name="payment-type"/>
-                                        <label htmlFor="e-money">Cash on Delivery</label>
+                                        <div className="radio-container">
+                                            <input type="radio" name="payment-type"/>
+                                            <label className="radio-label" htmlFor="e-money">e-Money</label>
+                                        </div>
+                                        <div className="radio-container">
+                                            <input type="radio" name="payment-type"/>
+                                            <label className="radio-label" htmlFor="e-money">Cash on Delivery</label>
+                                        </div>
+                        
                                     </div>
-                                    <div className="e-money-details">
+                                </div>
+
+                                <div className="section-row-two">
+                                <div className="e-money-details">
                                         <div>
                                             <label htmlFor="e-money number">e-Money Number</label>
-                                            <input type="text" placeholder="238521993" id="country"/>
+                                            <input type="number" placeholder="238521993" id="country"/>
                                         </div>
                                         <div>
                                             <label htmlFor="e-money number">e-Money PIN</label>
-                                            <input type="text" placeholder="6891" id="country"/>
+                                            <input type="number" placeholder="6891" id="country"/>
                                         </div>
                                         
                                     </div>
@@ -86,8 +94,30 @@ const Checkout =  () => {
                     </form>
                 </div>
                 <div className="summary">
-                    <button onClick={() => setModalIsOpen(true)}>continue and pay</button>
-
+                    <div className="">
+                        <div className="total-cost">
+                            <p class="price-details">total</p>
+                            <p class="cost">$5, 396</p>
+                        </div>
+                        <div className="total-cost">
+                            <p class="price-details">shipping</p>
+                            <p class="cost">$50</p>
+                        </div>
+                        <div className="total-cost">
+                            <p class="price-details">vat (included)</p>
+                            <p class="cost">$1, 079</p>
+                        </div>
+                        <div className="total-cost all-cost">
+                            <p class="price-details">grand total</p>
+                            <p class="grand-total">$5, 446</p>
+                        </div>
+                    </div>
+                    <button 
+                    className="confirmation-btn"
+                    onClick={() => setModalIsOpen(true)}
+                    >
+                        continue and pay
+                    </button>
                 </div>
             </div>
 

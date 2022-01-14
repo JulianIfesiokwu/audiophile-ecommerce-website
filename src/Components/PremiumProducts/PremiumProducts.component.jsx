@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from '../Button/Button.component';
 import earphone from '../../assets/home/desktop/image-earphones-yx1.jpg';
 import zx9Speaker from '../../assets/home/desktop/image-speaker-zx9.png';
 
@@ -20,7 +19,7 @@ const PremiumProducts = () => {
                         Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                     </p>
                     <Link to="/speakers/ZX9">
-                        <Button className="zx9-button">see product</Button>
+                        <button className="zx9-button">see product</button>
                     </Link>
                     
                 </div>
@@ -29,7 +28,7 @@ const PremiumProducts = () => {
             <div className="zx7-speaker">
                 <h2 className="zx7-name">zx7 speaker</h2>
                 <Link to="/speakers/ZX7">
-                    <Button>see product</Button>
+                    <button className="zx7-button">see product</button>
                 </Link>
             </div>
 
@@ -41,7 +40,7 @@ const PremiumProducts = () => {
                 <div className="earphone-link">
                     <h2 className="yx1-name">yx1 earphones</h2>
                     <Link to="/earphones/YX1">
-                        <Button>see product</Button>
+                        <button className="yx-1-button">see product</button>
                     </Link>
                 </div>
             </div>

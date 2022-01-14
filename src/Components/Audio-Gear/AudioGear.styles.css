@@ -3,10 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
+    width: 100%;
+    gap: 3%;
+}
+
+.audio-gear-information {
+    width: 50%;
 }
 
 .audio-gear-title {
-    width: 70%;
+    width: 80%;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 40px;
@@ -25,6 +32,11 @@
     color: #de7d4a;
 }
 
+.audio-gear-photo {
+    width: 50%;
+}
+
 .audio-gear-photo img {
+    width: 100%;
     border-radius: 8px;
 }

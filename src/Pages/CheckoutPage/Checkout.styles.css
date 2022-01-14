@@ -18,6 +18,7 @@
 
 .summary {
     width: 35%;
+    height: initial;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 1.5rem;
@@ -29,10 +30,7 @@
     font-weight: bold;
     line-height: 36px;
     letter-spacing: 1.14px;
-}
-
-.personal-info {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .section-title {
@@ -42,7 +40,11 @@
     font-size: 13px;
     line-height: 25px;
     letter-spacing: 0.93px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-field {
+    margin-bottom: 2rem;
 }
 
 .field {
@@ -54,8 +56,7 @@
     width: 100%;
 }
 
-label {
-    text-transform: capitalize;
+label, .payment-method {
     font-weight: bold;
     font-size: 12px;
     letter-spacing: -0.21px;
@@ -70,4 +71,76 @@ input {
     border: 1px solid #cfcfcf;
     margin-bottom: 1rem;
     width: 100%;
+}
+
+.section-row-one {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.radio-fields {
+    width: 50%;
+}
+
+.radio-container {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+}
+
+.e-money-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=radio]{
+    padding: 0;
+    display: inline-block;
+    width: 5%;
+    margin: 0 0.5rem;
+}
+
+.radio-label {
+    display: inline-block;
+}
+
+
+.total-cost {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-details {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.cost {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.grand-total {
+    color: #d87d4a;
+    font-weight: bold;
+}
+
+.all-cost {
+    margin-top: 1.5rem;
+}
+
+.confirmation-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #d87d4a;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 2rem;
 }

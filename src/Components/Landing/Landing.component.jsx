@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../Button/Button.component";
 import { Link } from "react-router-dom";
 
 import './Landing.styles.css';
@@ -18,7 +17,7 @@ const Landing = () => {
                      build quality made for the passionate music enthusiast.
                     </p>
                     <Link to="/headphones/XX99markII">
-                        <Button className="landing-button">SEE PRODUCT</Button>
+                        <button className="landing-button">SEE PRODUCT</button>
                     </Link>
                     
                 </div>
