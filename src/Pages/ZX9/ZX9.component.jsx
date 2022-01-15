@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../../Components/Button/Button.component";
+
 import ZX9image from "../../assets/product-zx9-speaker/desktop/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
@@ -18,7 +18,9 @@ const ZX9 = () => {
     return (
 
         <div className="headphones-main">
-        <button onClick={() => navigate(-1)}>Go Back</button>
+        <button 
+        className="back-btn"
+        onClick={() => navigate(-1)}>Go Back</button>
 
             <div className="headphones-row-one">
                 <div className="img-container">
@@ -32,12 +34,12 @@ const ZX9 = () => {
                     </p>
                     <p className="price">$ 4, 500</p>
                     <div className="add-product">
-                        <p className="product-quantity">
-                            <span className="reduce">-</span>
-                            1
-                            <span className="increase">+</span>
-                        </p>
-                        <Button>add to cart</Button>
+                        <div className="product-quantity">
+                            <p className="reduce">-</p>
+                            <p className="product-amount">1</p>
+                            <p className="increase">+</p>
+                        </div>
+                        <button className="add-product-btn">add to cart</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +100,7 @@ const ZX9 = () => {
                         <img src={zx7thumbnail} alt="zx7-speaker" />
                         <p className="link-name">zx7 speaker</p>
                         <Link to="/speakers/ZX7">
-                        <Button>see product</Button>
+                        <button className="see-product-btn">see product</button>
                         </Link>
                         
                     </div>
@@ -106,14 +108,14 @@ const ZX9 = () => {
                         <img src={xx99thumbnail} alt="" />
                         <p className="link-name">xx99 mark i</p>
                         <Link to="/headphones/XX99markI">
-                        <Button>see product</Button>
+                        <button className="see-product-btn">see product</button>
                         </Link>
                     </div>
                     <div className="similar-link">
                         <img src={xx59thumbnail} alt="" />
                         <p className="link-name">xx59</p>
                         <Link to="/headphones/XX59">
-                        <Button>see product</Button>
+                        <button className="see-product-btn">see product</button>
                         </Link>
                     </div>
                 </div>

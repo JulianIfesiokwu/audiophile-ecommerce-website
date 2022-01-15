@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
-// import { ReactComponent as orderApproved } from "../../assets/cart/Order-accepted.svg";
+import orderApproved from "../../assets/cart/Order-accepted.svg";
 
 import "./Checkout.styles.css";
 import { useState } from "react";
@@ -125,14 +125,27 @@ const Checkout =  () => {
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
                 contentLabel={"shopping-cart"}
-                className="modal-body">
+                className="confirmation-body"
+                style={{
+                    overlay: {
+                      position: 'fixed',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      backgroundColor: 'rgba(0,0,0,0.5)',
+                      zIndex: '2'
+                    }
+                }}>
                 <div className="order-confirmation">
-                    <orderApproved />
-                    <h2 className="confirmation-title">THANK YOU FOR YOUR ORDER</h2>
+                    <img className="order-approved-icon" src={orderApproved} alt="" />
+                    <h2 className="confirmation-title">THANK YOU <br/>FOR YOUR ORDER</h2>
                     <p className="notification">You will receive an email confirmation shortly.</p>
-                    <div className="order-summary"></div>
+                    <div className="order-summary">
+
+                    </div>
                     <Link to='/'>
-                        <button>back to home</button>
+                        <button className="back-home">back to home</button>
                     </Link>
                 </div>
                 

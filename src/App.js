@@ -24,7 +24,7 @@ function App() {
   return (
     <div className='app'>
       <ScrollToTop />
-    <Navigation />
+      <Navigation />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/headphones" element={<Headphones />} >
@@ -44,9 +44,9 @@ function App() {
         </Route>
         <Route path="/checkout" element={<Checkout />} />
         <Route
-      path="*"
-      element={ <ErrorPage /> }
-    />
+        path="*"
+        element={ <ErrorPage /> }
+        />
       </Routes>      
       <Footer />
     </div>

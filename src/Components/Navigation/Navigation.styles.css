@@ -25,7 +25,8 @@
 
 .overlay {
     z-index: 5;
-    opacity: 0.7;
+    /* background-color: rgba(0,0,0,0.7); */
+    background-color: #000;
 }
 
 .modal-header {
@@ -56,6 +57,7 @@
 .remove-btn {
     padding: 0;
     text-decoration: underline;
+    background-color: white;
 }
 
 .checkout-btn {

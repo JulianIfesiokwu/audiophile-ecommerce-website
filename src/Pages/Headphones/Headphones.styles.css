@@ -65,3 +65,17 @@
     width: 83%;
     margin-bottom: 1rem;
 }
+
+.product-btn {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background-color: #d98d4a;
+    color: #FFFFFF;
+}
+
+.product-btn:hover {
+    background-color: #FBAF85;
+}

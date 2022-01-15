@@ -7,7 +7,9 @@ import './ProductLink.styles.css'
 const ProductLink = (props) => {
     return (
         <div className="product-link">
-            <img className="link-image" src={props.linkImage} alt="link"/>
+            <div>
+                <img className="link-image" src={props.linkImage} alt="link"/>
+            </div>            
             <p className="product-title">{props.title}</p>
             <p className="shop-link">
                 shop

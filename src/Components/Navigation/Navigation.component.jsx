@@ -26,6 +26,17 @@ const Navigation = () => {
             onRequestClose={() => setModalIsOpen(false)}
             contentLabel={"shopping-cart"}
             className="modal-body"
+            style={{
+                overlay: {
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: 'rgba(0,0,0,0.5)',
+                  zIndex: '2'
+                }
+            }}
             >
                 <div className="modal-header">
                     <p className="modal-info">cart (<span className="modal-product-total">3</span>)</p>
