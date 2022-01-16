@@ -20,6 +20,7 @@ const Checkout =  () => {
                         <section className="personal-info">
                             <h2 className="section-title">billing details</h2>
                             <div className="section-field">
+                                <div className="half">
                                 <div className="field">
                                     <label htmlFor="name">Name</label>
                                     <input type="text" placeholder="Alexei Ward" id="name"/>
@@ -28,6 +29,8 @@ const Checkout =  () => {
                                     <label htmlFor="email">Email</label>
                                     <input type="email" placeholder="alexei@mail.com" id="email"/>
                                 </div>
+                                </div>
+
                                 <div className="field">
                                     <label htmlFor="phone">Phone Number</label>
                                     <input type="number" placeholder="+1 202-555-0136" id="phone"/>
@@ -42,6 +45,7 @@ const Checkout =  () => {
                                     <label htmlFor="name">Address</label>
                                     <input type="text" placeholder="1137 Williams Avenue" id="address"/>
                                 </div>
+                                <div className="half">
                                 <div className="field">
                                     <label htmlFor="zip code">Zip Code</label>
                                     <input type="number" placeholder="10001" id="zip code"/>
@@ -50,6 +54,8 @@ const Checkout =  () => {
                                     <label htmlFor="city">City</label>
                                     <input type="text" placeholder="New York" id="city"/>
                                 </div>
+                                </div>
+
                                 <div className="field">
                                     <label htmlFor="country">country</label>
                                     <input type="text" placeholder="United States" id="country"/>
@@ -77,11 +83,11 @@ const Checkout =  () => {
 
                                 <div className="section-row-two">
                                 <div className="e-money-details">
-                                        <div>
+                                        <div className="e-money">
                                             <label htmlFor="e-money number">e-Money Number</label>
                                             <input type="number" placeholder="238521993" id="country"/>
                                         </div>
-                                        <div>
+                                        <div className="e-money">
                                             <label htmlFor="e-money number">e-Money PIN</label>
                                             <input type="number" placeholder="6891" id="country"/>
                                         </div>

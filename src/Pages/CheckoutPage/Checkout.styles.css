@@ -95,6 +95,11 @@ input {
 .e-money-details {
     display: flex;
     justify-content: space-between;
+    gap: 2%;
+}
+
+.e-money {
+    width: 50%;
 }
 
 input[type=radio]{
@@ -183,4 +188,9 @@ input[type=radio]{
     border-radius: 8px;
     padding: 1.5rem;
     outline: none;
+}
+
+.half {
+    display: flex;
+    gap: 2%;
 }
