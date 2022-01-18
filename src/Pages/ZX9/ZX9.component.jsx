@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import ZX9image from "../../assets/product-zx9-speaker/desktop/image-product.jpg";
@@ -13,6 +13,8 @@ import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg
 import zx7thumbnail from "../../assets/shared/desktop/image-zx7-speaker.jpg";
 
 const ZX9 = () => {
+    const initialCount = 0
+    const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate();
 
     return (
@@ -34,10 +36,14 @@ const ZX9 = () => {
                     </p>
                     <p className="price">$ 4, 500</p>
                     <div className="add-product">
-                        <div className="product-quantity">
-                            <p className="reduce">-</p>
-                            <p className="product-amount">1</p>
-                            <p className="increase">+</p>
+                    <div className="product-quantity">
+                            <button 
+                            onClick={() => setCount((prevCount) => prevCount -1)}
+                            className="reduce">-</button>
+                            <button className="number">{count}</button>
+                            <button 
+                            onClick={() =>setCount((prevCount) => prevCount + 1)}
+                            className="increase">+</button>
                         </div>
                         <button className="add-product-btn">add to cart</button>
                     </div>

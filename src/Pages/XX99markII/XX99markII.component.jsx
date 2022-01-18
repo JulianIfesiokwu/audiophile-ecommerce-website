@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import xx99 from '../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg';
@@ -15,6 +15,8 @@ import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 import "./XX99markII.styles.css";
 
 const XX99markII = () => {
+    const initialCount = 0
+    const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate()
 
     return (
@@ -37,10 +39,14 @@ const XX99markII = () => {
                     </p>
                     <p className="price">$ 2, 999</p>
                     <div className="add-product">
-                        <div className="product-quantity">
-                            <p className="reduce">-</p>
-                            <p className="number">1</p>
-                            <p className="increase">+</p>
+                    <div className="product-quantity">
+                            <button 
+                            onClick={() => setCount((prevCount) => prevCount -1)}
+                            className="reduce">-</button>
+                            <button className="number">{count}</button>
+                            <button 
+                            onClick={() =>setCount((prevCount) => prevCount + 1)}
+                            className="increase">+</button>
                         </div>
                         <button className="add-product-btn">add to cart</button>
                     </div>

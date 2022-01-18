@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import YX1image from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
@@ -12,6 +12,8 @@ import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
 const YX1 = () => {
+    const initialCount = 0
+    const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate();
 
     return (
@@ -32,10 +34,14 @@ const YX1 = () => {
                     </p>
                     <p className="price">$ 599</p>
                     <div className="add-product">
-                        <div className="product-quantity">
-                            <p className="reduce">-</p>
-                            <p className="number">1</p>
-                            <p className="increase">+</p>
+                    <div className="product-quantity">
+                            <button 
+                            onClick={() => setCount((prevCount) => prevCount -1)}
+                            className="reduce">-</button>
+                            <button className="number">{count}</button>
+                            <button 
+                            onClick={() =>setCount((prevCount) => prevCount + 1)}
+                            className="increase">+</button>
                         </div>
                         <button className="add-product-btn">add to cart</button>
                     </div>

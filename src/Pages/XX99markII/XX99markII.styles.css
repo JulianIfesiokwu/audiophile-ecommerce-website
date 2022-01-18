@@ -132,12 +132,17 @@
     margin-bottom: 1rem;
 }
 
+.increase, .reduce {
+    margin-bottom: 0;
+    padding: 0;
+}
+
 .increase {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 .reduce {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 .increase:hover, .reduce:hover {
