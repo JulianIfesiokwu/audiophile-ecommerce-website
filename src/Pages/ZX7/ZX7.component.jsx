@@ -12,7 +12,12 @@ import xx99thumbnail from "../../assets/shared/desktop/image-xx99-mark-one-headp
 import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg";
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
-const ZX7 = () => {
+import shopProducts from "../../data";
+
+const ZX7 = (props) => {
+    const { Speakers: { ZX7 } } = shopProducts
+    const { onAdd } = props
+
     const initialCount = 0
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate()
@@ -44,7 +49,9 @@ const ZX7 = () => {
                             onClick={() =>setCount((prevCount) => prevCount + 1)}
                             className="increase">+</button>
                         </div>
-                        <button className="add-product-btn">add to cart</button>
+                        <button 
+                        onClick={() => onAdd(ZX7)}
+                        className="add-product-btn">add to cart</button>
                     </div>
                 </div>
             </div>

@@ -12,9 +12,14 @@ import xx99thumbnail from "../../assets/shared/desktop/image-xx99-mark-one-headp
 import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg";
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
+import shopProducts from "../../data";
+
 import "./XX99markII.styles.css";
 
-const XX99markII = () => {
+const XX99markII = (props) => {
+    const { Headphones: { XX99MarkII } } = shopProducts
+    const { onAdd } = props
+
     const initialCount = 0
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate()
@@ -22,9 +27,11 @@ const XX99markII = () => {
     return (
 
         <div className="headphones-main">
-        <button 
-        className="back-btn"
-        onClick={() => navigate(-1)}>Go Back</button>
+            <button 
+            className="back-btn"
+            onClick={() => navigate(-1)}>
+            Go Back
+            </button>
 
             <div className="headphones-row-one">
                 <div className="img-container">
@@ -32,23 +39,27 @@ const XX99markII = () => {
                 </div>
                 <div className="about-xx99">
                     <h2 className="xx99-intro">new product</h2>
-                    <p className="xx99-product-name">XX99 Mark II
-                    Headphones</p>
+                    <p className="xx99-product-name">{XX99MarkII.name} Headphones</p>
                     <p className="xx99-product-details">
                     The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                     </p>
-                    <p className="price">$ 2, 999</p>
+                    <p className="price">$ {XX99MarkII.price}</p>
                     <div className="add-product">
                     <div className="product-quantity">
-                            <button 
-                            onClick={() => setCount((prevCount) => prevCount -1)}
-                            className="reduce">-</button>
-                            <button className="number">{count}</button>
-                            <button 
-                            onClick={() =>setCount((prevCount) => prevCount + 1)}
-                            className="increase">+</button>
-                        </div>
-                        <button className="add-product-btn">add to cart</button>
+                        <button 
+                        onClick={() => setCount((prevCount) => prevCount -1)}
+                        className="reduce">-</button>
+                        <button className="number">{count}</button>
+                        <button 
+                        onClick={() =>setCount((prevCount) => prevCount + 1)}
+                        className="increase">+</button>
+                    </div>
+                    <button 
+                    onClick={() =>  {
+                        onAdd(XX99MarkII)
+                        console.log(XX99MarkII)}
+                    }
+                    className="add-product-btn">add to cart</button>
                     </div>
                 </div>
             </div>

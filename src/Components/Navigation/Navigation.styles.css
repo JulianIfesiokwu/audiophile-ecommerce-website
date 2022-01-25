@@ -66,4 +66,28 @@
     margin-bottom: 0;
     text-transform: uppercase;
     color: #FFFFFF;
+    padding: 1rem;
+}
+
+.empty {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 1rem;
 }

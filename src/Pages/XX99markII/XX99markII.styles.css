@@ -154,6 +154,7 @@
     font-size: 15px;
     line-height: 25px;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 .add-product-btn, .see-product-btn {

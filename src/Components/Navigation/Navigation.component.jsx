@@ -8,8 +8,12 @@ import './Navigation.styles.css';
 import logo from '../../assets/shared/desktop/logo.svg';
 import ShoppingCart from '../../assets/shared/desktop/icon-cart.svg';
 
-const Navigation = () => {
+const Navigation = (props) => {
+    const { cartItems, onAdd } = props;
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
+
+    const initialCount = 0
+    const [ count, setCount ] = useState(initialCount)
 
     return (
         <div className="navigation">
@@ -39,10 +43,26 @@ const Navigation = () => {
             }}
             >
                 <div className="modal-header">
-                    <p className="modal-info">cart (<span className="modal-product-total">3</span>)</p>
+                    <p className="modal-info">cart (<span className="modal-product-total">{cartItems.length}</span>)</p>
                     <button className="remove-btn">Remove all</button>
                 </div>
                 <div className="modal-main">
+                    <div>{
+                        cartItems.length === 0 && <div className="empty">Cart Is Empty</div>
+                        }
+                    </div>
+                    <div className="cart-items">
+                        {cartItems.map((cartItem) => (
+                            <div key ={cartItem.id} className="item">
+                                <div className="cart-item-img"><img src={cartItem.img} alt={cartItem.name} /></div>
+                                <div className="cart-item-details">
+                                    <p className="cart-item-name">{cartItem.name}</p>
+                                    <p className="cart-item-price">{cartItem.price}</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        ))}
+                    </div>
 
                 </div>
             

@@ -12,7 +12,12 @@ import xx99thumbnail from "../../assets/shared/desktop/image-xx99-mark-two-headp
 import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg";
 import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
 
-const XX99markI = () => {
+import shopProducts from "../../data";
+
+const XX99markI = (props) => {
+    const { Headphones: { XX99MarkI } } = shopProducts
+    const { onAdd } = props
+
     const initialCount = 0
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate();
@@ -45,7 +50,12 @@ const XX99markI = () => {
                             onClick={() =>setCount((prevCount) => prevCount + 1)}
                             className="increase">+</button>
                         </div>
-                        <button className="add-product-btn">add to cart</button>
+                        <button 
+                        onClick={() =>  {
+                            onAdd(XX99MarkI)
+                            console.log(XX99MarkI)}
+                        }
+                        className="add-product-btn">add to cart</button>
                     </div>
                 </div>
             </div>

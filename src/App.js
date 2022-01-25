@@ -1,5 +1,8 @@
 import Navigation from './Components/Navigation/Navigation.component';
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import  shopProducts from './data.js';
+
 import Homepage from './Pages/Homepage.component';
 import Footer from './Components/Footer/Footer.component';
 import Headphones from './Pages/Headphones/Headphones.component.jsx';
@@ -21,32 +24,44 @@ import ScrollToTop from './Components/ScrollToTop.component';
 import './App.css';
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const { products } = shopProducts
+
+  const onAdd = (product) => {
+    const exist = cartItems.find(x => x.id === product.id)
+    if(exist) {
+      setCartItems(cartItems.map(x => x.id === product.id ? {...exist, qty: exist.qty +1} : x))
+    } else {
+      setCartItems([...cartItems, {...product, qty: 1}])
+      console.log(product)
+    }
+    
+  }
+
   return (
+    
     <div className='app'>
       <ScrollToTop />
-      <Navigation />
-      <Routes>
+      <Navigation cartItems={cartItems} onAdd={onAdd}/>
+      <Routes onAdd={onAdd}>
         <Route path="/" element={<Homepage />} />
         <Route path="/headphones" element={<Headphones />} >
         <Route path="/headphones" element={<HeadphonesCategory />} />
-          <Route path="XX99markII" element={<XX99markII />} />
-          <Route path="XX99markI" element={<XX99markI />} />
-          <Route path="XX59" element={<XX59 />} />
+          <Route path="XX99markII" element={<XX99markII onAdd={onAdd} />} />
+          <Route path="XX99markI" element={<XX99markI onAdd={onAdd} />} />
+          <Route path="XX59" element={<XX59 onAdd={onAdd} />} />
         </Route>
         <Route path="/speakers" element={<Speakers />} >
           <Route path="/speakers" element={<SpeakersCategory />} />
-          <Route path="ZX9" element={<ZX9 />} />
-          <Route path="ZX7" element={<ZX7 />} />
+          <Route path="ZX9" element={<ZX9 onAdd={onAdd} />} />
+          <Route path="ZX7" element={<ZX7  onAdd={onAdd}/>} />
         </Route>
         <Route path="/earphones" element={<Earphones />} >
         <Route path="/earphones" element={<EarphonesCategory />} />
-          <Route path="YX1" element={<YX1 />} />
+          <Route path="YX1" element={<YX1 onAdd={onAdd} />} />
         </Route>
         <Route path="/checkout" element={<Checkout />} />
-        <Route
-        path="*"
-        element={ <ErrorPage /> }
-        />
+        <Route path="*" element={ <ErrorPage /> } />
       </Routes>      
       <Footer />
     </div>
