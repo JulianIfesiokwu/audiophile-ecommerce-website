@@ -18,7 +18,7 @@ const XX59 = (props) => {
     const { Headphones: { XX59 } } = shopProducts
     const { onAdd } = props
 
-    const initialCount = 0
+    const initialCount = 1
     const [ count, setCount ] = useState(initialCount)
 
     const navigate = useNavigate();

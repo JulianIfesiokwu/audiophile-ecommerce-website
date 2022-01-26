@@ -5,14 +5,23 @@ import orderApproved from "../../assets/cart/Order-accepted.svg";
 
 import "./Checkout.styles.css";
 import { useState } from "react";
-const Checkout =  () => {
+const Checkout =  (props) => {
+    const { cartItems } = props;
+
+    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
+    const vat = Math.round( (itemsPrice * 0.2).toFixed(2) )
+    const grandTotal = Math.round( (50) + itemsPrice + vat )
+    
     const navigate = useNavigate();
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
 
     return (
 
         <div className="checkout">
-            <button onClick={() => navigate(-1)}>Go Back</button>
+            {console.log(cartItems)}
+            <button 
+            className="back-checkout"
+            onClick={() => navigate(-1)}>Go Back</button>
             <div className="checkout-information">
                 <div className="billing-details">
                     <h2 className="billing-title">checkout</h2>
@@ -100,10 +109,30 @@ const Checkout =  () => {
                     </form>
                 </div>
                 <div className="summary">
+                    <div className="product-summary">
+                        {cartItems.map((cartItem) => (
+                            <div key ={cartItem.id} className="item">
+                                <div className="row">
+                                    <div className="col-1">
+                                        <div className="cart-item-img">
+                                            <img src={cartItem.img} alt={cartItem.name} />
+                                        </div>
+                                        <div className="cart-item-details">
+                                            <p className="cart-item-name">{cartItem.name}</p>
+                                            <p className="cart-item-price">$ {cartItem.price}</p>
+                                        </div>
+                                    </div>
+                                    <p className="total-quantity">x{cartItem.qty}</p>
+                                </div>
+                                
+                                
+                            </div>
+                        ))}</div>
+
                     <div className="">
                         <div className="total-cost">
                             <p class="price-details">total</p>
-                            <p class="cost">$5, 396</p>
+                            <p class="cost">${itemsPrice}</p>
                         </div>
                         <div className="total-cost">
                             <p class="price-details">shipping</p>
@@ -111,11 +140,11 @@ const Checkout =  () => {
                         </div>
                         <div className="total-cost">
                             <p class="price-details">vat (included)</p>
-                            <p class="cost">$1, 079</p>
+                            <p class="cost">$ {vat}</p>
                         </div>
                         <div className="total-cost all-cost">
                             <p class="price-details">grand total</p>
-                            <p class="grand-total">$5, 446</p>
+                            <p class="grand-total">$ {grandTotal}</p>
                         </div>
                     </div>
                     <button 

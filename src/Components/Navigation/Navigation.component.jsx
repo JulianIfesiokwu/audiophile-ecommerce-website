@@ -8,12 +8,11 @@ import './Navigation.styles.css';
 import logo from '../../assets/shared/desktop/logo.svg';
 import ShoppingCart from '../../assets/shared/desktop/icon-cart.svg';
 
-const Navigation = (props) => {
-    const { cartItems, onAdd } = props;
-    const [ modalIsOpen, setModalIsOpen ] = useState(false)
+Modal.setAppElement('#root');
 
-    const initialCount = 0
-    const [ count, setCount ] = useState(initialCount)
+const Navigation = (props) => {
+    const { cartItems, onAdd, onRemove } = props;
+    const [ modalIsOpen, setModalIsOpen ] = useState(false)
 
     return (
         <div className="navigation">
@@ -52,23 +51,46 @@ const Navigation = (props) => {
                         }
                     </div>
                     <div className="cart-items">
+                        <>
                         {cartItems.map((cartItem) => (
                             <div key ={cartItem.id} className="item">
-                                <div className="cart-item-img"><img src={cartItem.img} alt={cartItem.name} /></div>
-                                <div className="cart-item-details">
-                                    <p className="cart-item-name">{cartItem.name}</p>
-                                    <p className="cart-item-price">{cartItem.price}</p>
+                                <div className="col-1">
+                                    <div className="cart-item-img">
+                                        <img src={cartItem.img} alt={cartItem.name} />
+                                    </div>
+                                    <div className="cart-item-details">
+                                        <p className="cart-item-name">{cartItem.name}</p>
+                                        <p className="cart-item-price">$ {cartItem.price}</p>
+                                    </div>
                                 </div>
-                                <div></div>
+                                <div className="item-quantity">
+                                    <button 
+                                    onClick={() => onRemove(cartItem)}
+                                    className="reduce-item">-</button>
+                                    <button className="number">{cartItem.qty}</button>
+                                    <button 
+                                    onClick={() => onAdd(cartItem)}
+                                    className="increase-item">+</button>
+                                </div>
+                                
                             </div>
                         ))}
+                        </>
+                        <div className="total-container">
+                            <p className="total">Total</p>
+                            <p className="total-amount">$ {}</p>
+                        </div>
                     </div>
 
                 </div>
             
             <Link to="/checkout">
                 <button className="checkout-btn"
-                onClick={() => setModalIsOpen(false)}
+                onClick={() => {
+                    setModalIsOpen(false)
+                    // console.log(cartItems)
+                }
+                }
                 >
                 checkout
                 </button>

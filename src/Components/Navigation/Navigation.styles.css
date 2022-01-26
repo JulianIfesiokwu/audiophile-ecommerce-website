@@ -43,7 +43,7 @@
 
 .modal-body {
     background-color: white;
-    width: 30%;
+    width: 35%;
     min-height: 150px;
     position: absolute;
     top: 6rem;
@@ -84,10 +84,69 @@
 
 .item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .row {
-    width: 100%;
-    margin-bottom: 1rem;
+    width: 100%;    
+}
+
+.col-1 {
+    display: flex;
+}
+
+.cart-item-img {
+    margin-right: 1rem;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.item-quantity {
+    background-color: #f1f1f1;
+    display: inline-block;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.increase-item {
+    margin-left: 1rem;
+}
+
+.reduce-item {
+    margin-right: 1rem;
+}
+
+.increase-item, .reduce-item {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.total-amount {
+    font-weight: bold;
+    font-size: 18px;
 }

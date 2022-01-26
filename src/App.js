@@ -33,34 +33,44 @@ function App() {
       setCartItems(cartItems.map(x => x.id === product.id ? {...exist, qty: exist.qty +1} : x))
     } else {
       setCartItems([...cartItems, {...product, qty: 1}])
-      console.log(product)
+    }    
+  }
+
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id)
+    if(exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id))
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+        x.id === product.id ? { ...exist, qty: exist.qty -1} : x)
+      )
     }
-    
   }
 
   return (
     
     <div className='app'>
       <ScrollToTop />
-      <Navigation cartItems={cartItems} onAdd={onAdd}/>
+      <Navigation cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
       <Routes onAdd={onAdd}>
         <Route path="/" element={<Homepage />} />
         <Route path="/headphones" element={<Headphones />} >
         <Route path="/headphones" element={<HeadphonesCategory />} />
-          <Route path="XX99markII" element={<XX99markII onAdd={onAdd} />} />
-          <Route path="XX99markI" element={<XX99markI onAdd={onAdd} />} />
-          <Route path="XX59" element={<XX59 onAdd={onAdd} />} />
+          <Route path="XX99markII" element={<XX99markII onAdd={onAdd} onRemove={onRemove} />} />
+          <Route path="XX99markI" element={<XX99markI onAdd={onAdd} onRemove={onRemove} />} />
+          <Route path="XX59" element={<XX59 onAdd={onAdd} onRemove={onRemove} />} />
         </Route>
         <Route path="/speakers" element={<Speakers />} >
           <Route path="/speakers" element={<SpeakersCategory />} />
-          <Route path="ZX9" element={<ZX9 onAdd={onAdd} />} />
-          <Route path="ZX7" element={<ZX7  onAdd={onAdd}/>} />
+          <Route path="ZX9" element={<ZX9 onAdd={onAdd} onRemove={onRemove} />} />
+          <Route path="ZX7" element={<ZX7  onAdd={onAdd} onRemove={onRemove} />} />
         </Route>
         <Route path="/earphones" element={<Earphones />} >
         <Route path="/earphones" element={<EarphonesCategory />} />
-          <Route path="YX1" element={<YX1 onAdd={onAdd} />} />
+          <Route path="YX1" element={<YX1 onAdd={onAdd} onRemove={onRemove}/>} />
         </Route>
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
         <Route path="*" element={ <ErrorPage /> } />
       </Routes>      
       <Footer />

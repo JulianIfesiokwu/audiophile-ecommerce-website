@@ -196,3 +196,25 @@ input[type=radio]{
     display: flex;
     gap: 2%;
 }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-1 {
+    display: flex;
+}
+
+.total-quantity {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.back-checkout {
+    font-size: 15px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}

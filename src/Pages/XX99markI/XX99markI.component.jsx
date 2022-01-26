@@ -18,7 +18,7 @@ const XX99markI = (props) => {
     const { Headphones: { XX99MarkI } } = shopProducts
     const { onAdd } = props
 
-    const initialCount = 0
+    const initialCount = 1
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate();
 

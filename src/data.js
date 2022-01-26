@@ -2,15 +2,15 @@ const shopProducts = {
     Headphones: {
         XX99MarkI: {
             name: 'XX 99 Mark I',
-            price: '1, 750',
+            price: '1750',
             id: 1,
             img: '../assets/cart/image-xx99-mark-one-headphones.jpg'
         },
         XX99MarkII: {
             name: 'XX 99 Mark II',
-            price: '2, 999',
+            price: '2999',
             id: 2,
-            img: './assets/cart/image-xx99-mark-two-headphones.jpg'
+            img: '../public/image-xx99-mark-two-headphones.jpg'
         },
         XX59: {
             name: 'XX 59',
@@ -21,12 +21,12 @@ const shopProducts = {
     Speakers: {
         ZX9: {
             name: 'ZX9',
-            price: '4, 500',
+            price: '4500',
             id: 4
         },
         ZX7: {
             name: 'ZX7',
-            price: '3, 500',
+            price: '3500',
             id: 5
         }
     },

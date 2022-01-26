@@ -18,7 +18,7 @@ const ZX9 = (props) => {
     const { Speakers: { ZX9 } } = shopProducts
     const { onAdd } = props
 
-    const initialCount = 0
+    const initialCount = 1
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate();
 

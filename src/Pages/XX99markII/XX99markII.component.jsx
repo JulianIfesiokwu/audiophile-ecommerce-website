@@ -18,9 +18,9 @@ import "./XX99markII.styles.css";
 
 const XX99markII = (props) => {
     const { Headphones: { XX99MarkII } } = shopProducts
-    const { onAdd } = props
+    const { onAdd, onRemove } = props
 
-    const initialCount = 0
+    const initialCount = 1
     const [ count, setCount ] = useState(initialCount)
     const navigate = useNavigate()
 
@@ -47,7 +47,11 @@ const XX99markII = (props) => {
                     <div className="add-product">
                     <div className="product-quantity">
                         <button 
-                        onClick={() => setCount((prevCount) => prevCount -1)}
+                        onClick={() => {
+                            setCount((prevCount) => prevCount -1)
+                            onRemove(XX99MarkII)
+                            }
+                        }
                         className="reduce">-</button>
                         <button className="number">{count}</button>
                         <button 
