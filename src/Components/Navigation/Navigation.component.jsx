@@ -11,8 +11,11 @@ import ShoppingCart from '../../assets/shared/desktop/icon-cart.svg';
 Modal.setAppElement('#root');
 
 const Navigation = (props) => {
-    const { cartItems, onAdd, onRemove } = props;
+    const { cartItems, onAdd, onRemove, removeAll } = props;
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
+
+    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
+    const grandTotal = Math.round( itemsPrice )
 
     return (
         <div className="navigation">
@@ -43,7 +46,9 @@ const Navigation = (props) => {
             >
                 <div className="modal-header">
                     <p className="modal-info">cart (<span className="modal-product-total">{cartItems.length}</span>)</p>
-                    <button className="remove-btn">Remove all</button>
+                    <button 
+                    onClick={() => removeAll()}
+                    className="remove-btn">Remove all</button>
                 </div>
                 <div className="modal-main">
                     <div>{
@@ -78,7 +83,7 @@ const Navigation = (props) => {
                         </>
                         <div className="total-container">
                             <p className="total">Total</p>
-                            <p className="total-amount">$ {}</p>
+                            <p className="total-amount">$ {grandTotal}</p>
                         </div>
                     </div>
 

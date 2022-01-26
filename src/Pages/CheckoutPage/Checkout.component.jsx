@@ -6,7 +6,7 @@ import orderApproved from "../../assets/cart/Order-accepted.svg";
 import "./Checkout.styles.css";
 import { useState } from "react";
 const Checkout =  (props) => {
-    const { cartItems } = props;
+    const { cartItems, removeAll } = props;
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
     const vat = Math.round( (itemsPrice * 0.2).toFixed(2) )
@@ -18,7 +18,6 @@ const Checkout =  (props) => {
     return (
 
         <div className="checkout">
-            {console.log(cartItems)}
             <button 
             className="back-checkout"
             onClick={() => navigate(-1)}>Go Back</button>
@@ -109,6 +108,10 @@ const Checkout =  (props) => {
                     </form>
                 </div>
                 <div className="summary">
+                <div>{
+                        cartItems.length === 0 && <div className="empty">Cart Is Empty</div>
+                        }
+                    </div>
                     <div className="product-summary">
                         {cartItems.map((cartItem) => (
                             <div key ={cartItem.id} className="item">
@@ -180,7 +183,9 @@ const Checkout =  (props) => {
 
                     </div>
                     <Link to='/'>
-                        <button className="back-home">back to home</button>
+                        <button 
+                        onClick={() => removeAll()}
+                        className="back-home">back to home</button>
                     </Link>
                 </div>
                 

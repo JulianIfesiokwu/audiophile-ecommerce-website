@@ -98,7 +98,21 @@
 }
 
 .cart-item-img {
+    width: 80px;
+    height: 80px;
     margin-right: 1rem;
+}
+
+.cart-item-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cart-item-name {
@@ -116,7 +130,7 @@
 .item-quantity {
     background-color: #f1f1f1;
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;

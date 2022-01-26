@@ -48,11 +48,15 @@ function App() {
     }
   }
 
+  const removeAll = () => {
+    setCartItems([])
+  }
+
   return (
     
     <div className='app'>
       <ScrollToTop />
-      <Navigation cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
+      <Navigation cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} removeAll={removeAll}/>
       <Routes onAdd={onAdd}>
         <Route path="/" element={<Homepage />} />
         <Route path="/headphones" element={<Headphones />} >
@@ -70,7 +74,7 @@ function App() {
         <Route path="/earphones" element={<EarphonesCategory />} />
           <Route path="YX1" element={<YX1 onAdd={onAdd} onRemove={onRemove}/>} />
         </Route>
-        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems} removeAll={removeAll}/>} />
         <Route path="*" element={ <ErrorPage /> } />
       </Routes>      
       <Footer />

@@ -204,12 +204,14 @@ input[type=radio]{
 
 .col-1 {
     display: flex;
+    justify-items: center;
 }
 
 .total-quantity {
     font-weight: bold;
     font-size: 15px;
     line-height: 25px;
+    align-self: center;
 }
 
 .back-checkout {

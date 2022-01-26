@@ -59,10 +59,7 @@ const XX99markII = (props) => {
                         className="increase">+</button>
                     </div>
                     <button 
-                    onClick={() =>  {
-                        onAdd(XX99MarkII)
-                        console.log(XX99MarkII)}
-                    }
+                    onClick={() =>  onAdd(XX99MarkII)}
                     className="add-product-btn">add to cart</button>
                     </div>
                 </div>
