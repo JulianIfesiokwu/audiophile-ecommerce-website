@@ -40,3 +40,54 @@
     width: 100%;
     border-radius: 8px;
 }
+
+@media (max-width: 799px) {
+    .audio-gear {
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+    }
+
+    .audio-gear-information {
+        width: auto;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .audio-gear-title,.audio-gear-about {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .audio-gear-photo {
+        width: auto;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .audio-gear {
+        flex-direction: column-reverse;
+    }
+
+    .audio-gear-photo {
+        width: auto;
+        margin-bottom: 2rem;
+    }
+
+    .audio-gear-information {
+        width: auto;
+        text-align: center;
+    }
+
+    .audio-gear-title {
+        width: auto;
+        font-size: 28px;
+        letter-spacing: 1px;
+        line-height: initial;
+    }
+
+    .audio-gear-about {
+        width: auto;
+    }
+    
+}

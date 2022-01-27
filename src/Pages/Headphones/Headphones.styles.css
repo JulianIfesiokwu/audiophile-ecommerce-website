@@ -79,3 +79,15 @@
 .product-btn:hover {
     background-color: #FBAF85;
 }
+
+@media (max-width: 799px) {
+    .headphones-main {
+        margin-top: 3rem;
+        padding: 2rem;
+    }
+
+    .headphones-row-one, .headphones-row-two, .headphones-row-three {
+        flex-direction: column;
+    }
+    
+}

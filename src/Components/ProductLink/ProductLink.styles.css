@@ -31,3 +31,9 @@
 .shop-link img {
     margin-left: 1rem;
 }
+
+@media (max-width: 480px) {
+    .product-link {
+        margin-bottom: 4rem;
+    }    
+}

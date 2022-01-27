@@ -132,3 +132,115 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+/* For Tablet */
+@media (max-width: 799px) {
+    .zx9-speaker {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .large-image {
+        width: 70%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .zx9-details {
+        width: auto;
+        text-align: center;
+    }
+
+    .zx9-name {
+        width: 50%;
+        margin: 1rem auto;
+    }
+    
+    .zx9-info {
+        width: 65%;
+        margin: 1rem auto;
+    }
+
+    .zx9-button {
+        padding: 1rem 2rem;
+    }
+
+    .zx7-speaker {
+        background-image: url(../../assets/home/tablet/image-speaker-zx7.jpg);
+        padding: 3rem 5rem;
+    }
+
+    .zx7-name {
+        margin-bottom: 1rem;
+    }
+
+    .zx7-button, .yx-1-button {
+        padding: 1rem 2rem;
+    }
+    
+}
+
+/* For mobile */
+@media (max-width: 480px) {
+    .premium-products {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zx9-speaker {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .large-image {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .zx9-name {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1.29px;
+        width: auto;
+    }
+
+    .zx9-details {
+        width: auto;
+    }
+
+    .zx9-info {
+        width: auto;
+    }
+
+    .zx7-name {
+        margin-bottom: 1rem;
+    }
+
+    .zx7-speaker {
+        padding: 5rem 0 0 1rem;
+        background-image: url(../../assets/home/mobile/image-speaker-zx7.jpg);
+    }
+
+    .zx7-button, .yx-1-button {
+        padding: 0.5rem;
+    }
+
+    .earphones {
+        flex-direction: column;
+    }
+
+    .earphone-image {
+        width: auto;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .earphone-link {
+        width: auto;
+    }
+
+}

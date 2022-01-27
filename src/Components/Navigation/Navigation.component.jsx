@@ -7,6 +7,7 @@ import './Navigation.styles.css';
 
 import logo from '../../assets/shared/desktop/logo.svg';
 import ShoppingCart from '../../assets/shared/desktop/icon-cart.svg';
+import HamburgerIcon from '../../assets/shared/mobile/icon-hamburger.svg';
 
 Modal.setAppElement('#root');
 
@@ -19,6 +20,7 @@ const Navigation = (props) => {
 
     return (
         <div className="navigation">
+            <img className="hamburger-icon" src={HamburgerIcon} alt="" />
             <img src={logo} alt="logo" className="logo"/>
             <NavList />
             <img

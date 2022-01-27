@@ -1,3 +1,17 @@
 .main-section {
     padding: 1.5rem 7rem;
 }
+
+/* For Tablets */
+@media (max-width: 799px) {
+    .main-section {
+        padding: 2rem;
+    }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+    .main-section {
+        padding: 2rem;
+    }
+}

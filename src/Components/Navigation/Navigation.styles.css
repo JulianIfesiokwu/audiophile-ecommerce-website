@@ -9,6 +9,10 @@
     border-bottom: 1px solid #333333;
 }
 
+.hamburger-icon {
+    display: none;
+}
+
 .logo {
     cursor: pointer;
     width: 150px;
@@ -163,4 +167,41 @@
 .total-amount {
     font-weight: bold;
     font-size: 18px;
+}
+
+/* For Tablets */
+@media (max-width: 799px) {
+    .navigation {
+        width: 100%;
+        padding: 2rem;
+        justify-content: initial;
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-right: 2rem;
+    }
+
+    .shopping-cart {
+        position: absolute;
+        right: 2rem;
+    }
+    
+}
+
+
+/* For Phones */
+@media (max-width: 480px) {
+
+    .navigation {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+
+
 }

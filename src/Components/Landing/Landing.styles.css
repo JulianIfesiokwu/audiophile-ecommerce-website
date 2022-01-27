@@ -60,3 +60,57 @@
 .landing-button:hover {
     background-color: #FBAF85;
 }
+
+/* For Tablets */
+@media (max-width: 799px) {
+    .landing {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-image: url(../../assets/home/tablet/image-header.jpg);
+        background-size: 85%;
+        background-position: center;
+        height: 105vh;
+    }
+
+    .landing-section {
+        justify-content: center;
+    }
+
+    .landing-details {
+        padding-top: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-info {
+        width: auto;
+    }
+}
+
+/* For Phones */
+@media (max-width: 480px) {
+    .landing {
+        padding: 3rem 2rem;
+        text-align: center;
+        background-image: url(../../assets/home/mobile/image-header.jpg);
+        background-size: 100%;
+        background-position: center;
+        height: 110vh;
+    }
+
+    .landing-details {
+        width: auto;
+    }
+
+    .product-name {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 1.29px;
+    }
+
+    .product-info {
+        width: auto;
+    }
+}

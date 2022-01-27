@@ -17,3 +17,21 @@
 .navlist li:hover {
     color: #d87d4a;
 }
+
+
+/* For Tablets */
+@media (max-width: 799px) {
+
+    .navlist {
+        display: none;
+    }
+
+}
+/* For Phones */
+@media (max-width: 480px) {
+
+    .navlist {
+        display: none;
+    }
+
+}

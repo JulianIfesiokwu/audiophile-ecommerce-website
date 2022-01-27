@@ -18,7 +18,7 @@ const Footer = () => {
                 <p className="audiophile-footer-text">
                 Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
                 </p>
-                <div className="social_media">
+                <div className="social_media no-display-tablet">
                     <Facebook 
                     onMouseOver={() => console.log('yes')}
                     className="icon"/>
@@ -29,6 +29,13 @@ const Footer = () => {
             </div>
             <div className="row-three">
                 <p className="copyright">Copyright 2021. All Rights Reserved</p>
+                <div className="social_media no-display-desktop">
+                    <Facebook 
+                    onMouseOver={() => console.log('yes')}
+                    className="icon"/>
+                    <Twitter className="icon"/>
+                    <Instagram className="icon" />
+                </div>
             </div>
 
             

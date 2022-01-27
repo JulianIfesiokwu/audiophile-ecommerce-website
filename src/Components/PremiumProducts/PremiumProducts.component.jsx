@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import earphone from '../../assets/home/desktop/image-earphones-yx1.jpg';
+import earphoneTablet from '../../assets/home/tablet/image-earphones-yx1.jpg';
 import zx9Speaker from '../../assets/home/desktop/image-speaker-zx9.png';
 
 import './PremiumProducts.styles.css';
@@ -34,7 +35,10 @@ const PremiumProducts = () => {
 
             <div className="earphones">
                 <div className="earphone-image">
-                    <img src={earphone} alt=""/>
+                    <picture>
+                        <source media="(min-width:481px)" srcset={earphoneTablet}></source>
+                        <img src={earphone} alt=""/>
+                    </picture>
                 </div>
 
                 <div className="earphone-link">
