@@ -220,3 +220,91 @@ input[type=radio]{
     cursor: pointer;
     margin-bottom: 2rem;
 }
+
+.order-summary {
+    /* border-radius: 8px; */
+}
+
+.grand-total-confirm {
+    background-color: #000;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.all-added {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFF;
+    margin-bottom: 1rem;
+}
+
+.max-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+@media (max-width:479px) {
+    .checkout {
+        padding: 2rem;
+    }
+
+    .checkout-information {
+        flex-direction: column;
+    }
+
+    .billing-details {
+        width: auto;
+        margin-bottom: 2rem;
+    }
+
+    .summary {
+        width: 100%;
+    }
+
+    .half {
+        flex-direction: column;
+    }
+
+    .field {
+        width: 100%;
+    }
+    
+    input {
+        padding: 1rem;
+    }
+
+    .section-row-one {
+        flex-direction: column;
+    }
+
+    .radio-fields {
+        width: 100%;
+    }
+
+    .radio-container {
+        padding: 0.75rem;
+    }
+    
+    .payment-method {
+        margin-bottom: 1rem;
+    }
+
+    .e-money-details {
+        flex-direction: column;
+    }
+
+    .e-money {
+        width: 100%;
+    }
+
+    .section-field {
+        margin-bottom: 0;
+    }
+
+    .confirmation-body {
+        width: 85%;
+    }
+}

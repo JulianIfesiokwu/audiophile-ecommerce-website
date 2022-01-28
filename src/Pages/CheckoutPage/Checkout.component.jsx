@@ -65,7 +65,7 @@ const Checkout =  (props) => {
                                 </div>
 
                                 <div className="field">
-                                    <label htmlFor="country">country</label>
+                                    <label htmlFor="country">Country</label>
                                     <input type="text" placeholder="United States" id="country"/>
                                 </div>
 
@@ -134,20 +134,20 @@ const Checkout =  (props) => {
 
                     <div className="">
                         <div className="total-cost">
-                            <p class="price-details">total</p>
-                            <p class="cost">${itemsPrice}</p>
+                            <p className="price-details">total</p>
+                            <p className="cost">${itemsPrice}</p>
                         </div>
                         <div className="total-cost">
-                            <p class="price-details">shipping</p>
-                            <p class="cost">$50</p>
+                            <p className="price-details">shipping</p>
+                            <p className="cost">$50</p>
                         </div>
                         <div className="total-cost">
-                            <p class="price-details">vat (included)</p>
-                            <p class="cost">$ {vat}</p>
+                            <p className="price-details">vat (included)</p>
+                            <p className="cost">$ {vat}</p>
                         </div>
                         <div className="total-cost all-cost">
-                            <p class="price-details">grand total</p>
-                            <p class="grand-total">$ {grandTotal}</p>
+                            <p className="price-details">grand total</p>
+                            <p className="grand-total">$ {grandTotal}</p>
                         </div>
                     </div>
                     <button 
@@ -180,6 +180,15 @@ const Checkout =  (props) => {
                     <h2 className="confirmation-title">THANK YOU <br/>FOR YOUR ORDER</h2>
                     <p className="notification">You will receive an email confirmation shortly.</p>
                     <div className="order-summary">
+                        <div className="first-item">
+                            {console.log(cartItems[0])}
+                            {cartItems[0].img}
+                        </div>
+                        <div className="other-items"></div>
+                        <div className="grand-total-confirm">
+                            <p className="all-added">grand total</p>
+                            <p className="max-amount">$ {grandTotal}</p>
+                        </div>
 
                     </div>
                     <Link to='/'>

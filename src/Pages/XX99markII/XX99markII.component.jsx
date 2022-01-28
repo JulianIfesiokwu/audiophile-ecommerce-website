@@ -10,9 +10,17 @@ import imageOne from '../../assets/product-xx99-mark-two-headphones/desktop/imag
 import imageTwo from '../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg'
 import imageThree from '../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg';
 
-import xx99thumbnail from "../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
-import xx59thumbnail from "../../assets/shared/desktop/image-xx59-headphones.jpg";
-import zx9thumbnail from "../../assets/shared/desktop/image-zx9-speaker.jpg";
+import xx991thumbnailDesktop from '../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg';
+import xx991thumbnailTablet from '../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg'
+import xx991thumbnailMobile from '../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg';
+
+import xx59thumbnailDesktop from "../../assets/shared/desktop/image-xx59-headphones.jpg";
+import xx59thumbnailTablet from "../../assets/shared/tablet/image-xx59-headphones.jpg";
+import xx59thumbnailMobile from "../../assets/shared/mobile/image-xx59-headphones.jpg";
+
+import zx9thumbnailDesktop from "../../assets/shared/desktop/image-zx9-speaker.jpg";
+import zx9thumbnailTablet from "../../assets/shared/tablet/image-zx9-speaker.jpg";
+import zx9thumbnailMobile from "../../assets/shared/mobile/image-zx9-speaker.jpg";
 
 import shopProducts from "../../data";
 
@@ -38,8 +46,8 @@ const XX99markII = (props) => {
             <div className="headphones-row-one">
                 <div className="img-container">
                     <picture>
-                        <source media="(min-width:799px)" srcset={xx99Desktop}></source>
-                        <source media="(min-width:481px)" srcset={xx99Tablet}></source>
+                        <source media="(min-width:799px)" srcSet={xx99Desktop}></source>
+                        <source media="(min-width:481px)" srcSet={xx99Tablet}></source>
                         <img src={xx99Mobile} alt="" />
                     </picture>
                 </div>
@@ -131,7 +139,11 @@ const XX99markII = (props) => {
                 <p className="similiar-products-title">you may also like</p>
                 <div className="similar-products-links">
                     <div className="similar-link">
-                        <img src={xx99thumbnail} alt="xx99" />
+                    <picture>
+                        <source media="(min-width:799px)" srcSet={xx991thumbnailDesktop}></source>
+                        <source media="(min-width:481px)" srcSet={xx991thumbnailTablet}></source>
+                        <img src={xx991thumbnailMobile} alt="" />
+                    </picture>
                         <p className="link-name">xx99 mark i</p>
                         <Link to="/headphones/XX99markI">
                         <button className="see-product-btn">see product</button>
@@ -139,7 +151,11 @@ const XX99markII = (props) => {
                         
                     </div>
                     <div className="similar-link">
-                        <img src={xx59thumbnail} alt="" />
+                    <picture>
+                        <source media="(min-width:799px)" srcSet={xx59thumbnailDesktop}></source>
+                        <source media="(min-width:481px)" srcSet={xx59thumbnailTablet}></source>
+                        <img src={xx59thumbnailMobile} alt="" />
+                    </picture>
                         <p className="link-name">xx59</p>
                         <Link to="/headphones/XX59">
                         <button className="see-product-btn">see product</button>
@@ -147,7 +163,11 @@ const XX99markII = (props) => {
                         
                     </div>
                     <div className="similar-link">
-                        <img src={zx9thumbnail} alt="" />
+                        <picture>
+                            <source media="(min-width:799px)" srcSet={zx9thumbnailDesktop}></source>
+                            <source media="(min-width:481px)" srcSet={zx9thumbnailTablet}></source>
+                            <img src={zx9thumbnailMobile} alt="" />
+                        </picture>
                         <p className="link-name">zx9 speaker</p>
                         <Link to="/speakers/ZX9">
                         <button className="see-product-btn">see product</button>

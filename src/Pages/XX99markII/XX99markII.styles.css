@@ -116,6 +116,7 @@
 
 .similar-link {
     flex: 1;
+    margin-bottom: 2rem;
 }
 
 .similar-link img {
@@ -190,5 +191,44 @@
 
     .accessories {
         margin-left: 10rem;
+    }
+
+    .modal-body {
+        background-color: white;
+        width: 50%;
+        min-height: 150px;
+        position: absolute;
+        top: 7rem;
+        right: 2rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .image-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-one, .image-two, .image-three {
+        margin-bottom: 1rem;
+    }
+
+    .similar-products-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-contents {
+        margin-left: 0;
+        display: initial;
+    }
+
+    .modal-body {
+        background-color: white;
+        width: 90%;
+        min-height: 150px;
+        position: absolute;
+        top: 7rem;
+        right: 1rem;
     }
 }

@@ -16,8 +16,8 @@ const EarphonesCategory = () => {
                 <div className="headphones-row-one">
                     <div className="img-container">
                         <picture>
-                        <source media="(min-width:800px)" srcset={YX1Desktop}></source>
-                        <source media="(min-width:481px)" srcset={YX1Tablet}></source>
+                        <source media="(min-width:800px)" srcSet={YX1Desktop}></source>
+                        <source media="(min-width:481px)" srcSet={YX1Tablet}></source>
                         <img src={YX1Mobile} alt="" />
                         </picture>
                     </div>

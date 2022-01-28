@@ -14,8 +14,8 @@ const PremiumProducts = () => {
         <div className="premium-products">
             <div className="zx9-speaker">
                 <div className="large-image">
-                    <source media="(min-width:800px)" srcset={zx9Desktop}></source>
-                    <source media="(min-width:481px)" srcset={zx9Tablet}></source>
+                    <source media="(min-width:800px)" srcSet={zx9Desktop}></source>
+                    <source media="(min-width:481px)" srcSet={zx9Tablet}></source>
                     <img src={zx9Mobile} alt="speaker" />
                 </div>
                 
@@ -41,8 +41,8 @@ const PremiumProducts = () => {
             <div className="earphones">
                 <div className="earphone-image">
                     <picture>
-                        <source media="(min-width:800px)" srcset={YX1Desktop}></source>
-                        <source media="(min-width:481px)" srcset={YX1Tablet}></source>
+                        <source media="(min-width:800px)" srcSet={YX1Desktop}></source>
+                        <source media="(min-width:481px)" srcSet={YX1Tablet}></source>
                         <img src={YX1Mobile} alt=""/>
                     </picture>
                 </div>

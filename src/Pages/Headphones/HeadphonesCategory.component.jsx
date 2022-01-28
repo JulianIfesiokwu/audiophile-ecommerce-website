@@ -24,8 +24,8 @@ const HeadphonesCategory = () => {
                 <div className="headphones-row-one">
                     <div className="img-container">
                         <picture>
-                            <source media="(min-width:799px)" srcset={xx99Desktop}></source>
-                            <source media="(min-width:481px)" srcset={xx99Tablet}></source>
+                            <source media="(min-width:799px)" srcSet={xx99Desktop}></source>
+                            <source media="(min-width:481px)" srcSet={xx99Tablet}></source>
                             <img src={xx99Mobile} alt="" />
                         </picture>
                     </div>
@@ -57,8 +57,8 @@ const HeadphonesCategory = () => {
                     </div>
                     <div className="img-container">
                         <picture>
-                            <source media="(min-width:800px)" srcset={xx99m1Desktop}></source>
-                            <source media="(min-width:481px)" srcset={xx99m1Tablet}></source>
+                            <source media="(min-width:800px)" srcSet={xx99m1Desktop}></source>
+                            <source media="(min-width:481px)" srcSet={xx99m1Tablet}></source>
                             <img src={xx99m1Mobile} alt="" />
                         </picture>
                     </div>
@@ -67,8 +67,8 @@ const HeadphonesCategory = () => {
                 <div className="headphones-row-three">
                     <div className="img-container">
                         <picture>
-                            <source media="(min-width: 800px)" srcset={xx59Desktop}></source>
-                            <source media="(min-width:465px)" srcset={xx59Tablet}></source>
+                            <source media="(min-width: 800px)" srcSet={xx59Desktop}></source>
+                            <source media="(min-width:465px)" srcSet={xx59Tablet}></source>
                             <img src={xx59Mobile} alt="" />
                         </picture>
                     </div>

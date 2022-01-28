@@ -20,8 +20,8 @@ const SpeakersCategory = () => {
                 <div className="headphones-row-one">
                     <div className="img-container">
                         <picture>
-                            <source media="(min-width:800px)" srcset={zx9Desktop}></source>
-                            <source media="(min-width:481px)" srcset={zx9Tablet}></source>
+                            <source media="(min-width:800px)" srcSet={zx9Desktop}></source>
+                            <source media="(min-width:481px)" srcSet={zx9Tablet}></source>
                             <img src={zx9Mobile} alt="" />
                         </picture>
                     </div>
@@ -51,8 +51,8 @@ const SpeakersCategory = () => {
                     </div>
                     <div className="img-container">
                         <picture>
-                            <source media="(min-width:800px)" srcset={zx7Desktop}></source>
-                            <source media="(min-width:481px)" srcset={zx7Tablet}></source>
+                            <source media="(min-width:800px)" srcSet={zx7Desktop}></source>
+                            <source media="(min-width:481px)" srcSet={zx7Tablet}></source>
                         <img src={zx7Mobile} alt="" />
                         </picture>
                     </div>
