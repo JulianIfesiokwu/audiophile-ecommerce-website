@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import xx99 from "../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
+import xx99Desktop from "../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
+import xx99Tablet from "../../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg";
+import xx99Mobile from "../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import imageOne from '../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'
@@ -31,7 +33,11 @@ const XX99markI = (props) => {
 
             <div className="headphones-row-one">
                 <div className="img-container">
-                    <img src={xx99} alt="" />
+                    <picture>
+                        <source media="(min-width:799px)" srcset={xx99Desktop}></source>
+                        <source media="(min-width:481px)" srcset={xx99Tablet}></source>
+                        <img src={xx99Mobile} alt="" />
+                    </picture>
                 </div>
                 <div className="about-xx99">
                     <p className="xx99-product-name">XX99 Mark I

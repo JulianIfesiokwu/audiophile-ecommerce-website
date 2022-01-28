@@ -172,3 +172,23 @@
     background-color: #FBAF85;
 }
 
+
+@media (max-width: 799px) {
+    .xx99-row-two {
+        flex-direction: column;
+    }
+    
+    .features {
+        width: auto;
+        margin-bottom: 2rem;
+    }
+
+    .box-contents {
+        margin-left: 0;
+        display: flex;
+    }
+
+    .accessories {
+        margin-left: 10rem;
+    }
+}

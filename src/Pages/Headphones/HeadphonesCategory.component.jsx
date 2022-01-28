@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
-import xx99 from '../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg';
-import xx99m1 from '../../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg';
-import xx59 from '../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg';
+import xx99Mobile from '../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg';
+import xx99Tablet from '../../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg';
+import xx99Desktop from '../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg';
+import xx99m1Mobile from '../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg';
+import xx99m1Tablet from '../../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg';
+import xx99m1Desktop from '../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg';
+import xx59Mobile from '../../assets/product-xx59-headphones/mobile/image-product.jpg';
+import xx59Tablet from '../../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg';
+import xx59Desktop from '../../assets/product-xx59-headphones/desktop/image-product.jpg';
 
 import './Headphones.styles.css';
 
@@ -17,7 +23,11 @@ const HeadphonesCategory = () => {
             <div className="headphones-main">
                 <div className="headphones-row-one">
                     <div className="img-container">
-                        <img src={xx99} alt="" />
+                        <picture>
+                            <source media="(min-width:799px)" srcset={xx99Desktop}></source>
+                            <source media="(min-width:481px)" srcset={xx99Tablet}></source>
+                            <img src={xx99Mobile} alt="" />
+                        </picture>
                     </div>
                     <div className="about-xx99">
                         <h2 className="xx99-intro">new product</h2>
@@ -46,13 +56,21 @@ const HeadphonesCategory = () => {
                         
                     </div>
                     <div className="img-container">
-                        <img src={xx99m1} alt="" />
+                        <picture>
+                            <source media="(min-width:800px)" srcset={xx99m1Desktop}></source>
+                            <source media="(min-width:481px)" srcset={xx99m1Tablet}></source>
+                            <img src={xx99m1Mobile} alt="" />
+                        </picture>
                     </div>
                 </div>
 
                 <div className="headphones-row-three">
                     <div className="img-container">
-                        <img src={xx59} alt="" />
+                        <picture>
+                            <source media="(min-width: 800px)" srcset={xx59Desktop}></source>
+                            <source media="(min-width:465px)" srcset={xx59Tablet}></source>
+                            <img src={xx59Mobile} alt="" />
+                        </picture>
                     </div>
                     <div className="about-xx59">
                         <p className="xx59-product-name">XX59

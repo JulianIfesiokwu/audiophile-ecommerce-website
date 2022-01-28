@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
-import yx1 from "../../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+import YX1Mobile from "../../assets/product-yx1-earphones/mobile/image-product.jpg";
+import YX1Tablet from "../../assets/product-yx1-earphones/tablet/image-category-page-preview.jpg";
+import YX1Desktop from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
 
 const EarphonesCategory = () => {
     return (
@@ -13,7 +15,11 @@ const EarphonesCategory = () => {
         <div className="headphones-main">
                 <div className="headphones-row-one">
                     <div className="img-container">
-                        <img src={yx1} alt="earphones" />
+                        <picture>
+                        <source media="(min-width:800px)" srcset={YX1Desktop}></source>
+                        <source media="(min-width:481px)" srcset={YX1Tablet}></source>
+                        <img src={YX1Mobile} alt="" />
+                        </picture>
                     </div>
                     <div className="about-xx99">
                         <h2 className="xx99-intro">new product</h2>

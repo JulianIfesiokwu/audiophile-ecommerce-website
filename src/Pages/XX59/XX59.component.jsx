@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import xx59 from "../../assets/product-xx59-headphones/desktop/image-product.jpg";
+import xx59Desktop from "../../assets/product-xx59-headphones/desktop/image-product.jpg";
+import xx59Tablet from "../../assets/product-xx59-headphones/tablet/image-product.jpg";
+import xx59Mobile from "../../assets/product-xx59-headphones/mobile/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import imageOne from '../../assets/product-xx59-headphones/desktop/image-gallery-1.jpg'
@@ -31,7 +33,11 @@ const XX59 = (props) => {
 
             <div className="headphones-row-one">
                 <div className="img-container">
-                    <img src={xx59} alt="" />
+                    <picture>
+                        <source media="(min-width:799px)" srcset={xx59Desktop}></source>
+                        <source media="(min-width:481px)" srcset={xx59Tablet}></source>
+                        <img src={xx59Desktop} alt="" />
+                    </picture>
                 </div>
                 <div className="about-xx99">
                     <p className="xx99-product-name">XX59</p>

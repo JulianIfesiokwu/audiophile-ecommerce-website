@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 
-import zx9 from '../../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg';
-import zx7 from '../../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg';
+import zx9Mobile from '../../assets/product-zx9-speaker/mobile/image-product.jpg';
+import zx9Tablet from '../../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg';
+import zx9Desktop from '../../assets/product-zx9-speaker/desktop/image-product.jpg';
+import zx7Mobile from '../../assets/product-zx7-speaker/mobile/image-product.jpg';
+import zx7Tablet from '../../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg';
+import zx7Desktop from '../../assets/product-zx7-speaker/desktop/image-product.jpg';
 
 const SpeakersCategory = () => {
     return (
@@ -15,7 +19,11 @@ const SpeakersCategory = () => {
             <div className="headphones-main">
                 <div className="headphones-row-one">
                     <div className="img-container">
-                        <img src={zx9} alt="" />
+                        <picture>
+                            <source media="(min-width:800px)" srcset={zx9Desktop}></source>
+                            <source media="(min-width:481px)" srcset={zx9Tablet}></source>
+                            <img src={zx9Mobile} alt="" />
+                        </picture>
                     </div>
                     <div className="about-xx99">
                         <h2 className="xx99-intro">new product</h2>
@@ -42,7 +50,11 @@ const SpeakersCategory = () => {
                         
                     </div>
                     <div className="img-container">
-                        <img src={zx7} alt="" />
+                        <picture>
+                            <source media="(min-width:800px)" srcset={zx7Desktop}></source>
+                            <source media="(min-width:481px)" srcset={zx7Tablet}></source>
+                        <img src={zx7Mobile} alt="" />
+                        </picture>
                     </div>
                 </div>
 

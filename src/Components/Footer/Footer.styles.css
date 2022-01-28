@@ -55,7 +55,7 @@
     }
 
     .footer .navlist {
-        display: flex;
+        /* display: flex; */
         margin-top: 1rem;
     }
 

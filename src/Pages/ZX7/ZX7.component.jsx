@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import ZX7image from "../../assets/product-zx7-speaker/desktop/image-product.jpg";
+import ZX7Desktop from "../../assets/product-zx7-speaker/desktop/image-product.jpg";
+import ZX7Tablet from "../../assets/product-zx7-speaker/tablet/image-product.jpg";
+import ZX7Mobile from "../../assets/product-zx7-speaker/mobile/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import imageOne from '../../assets/product-zx7-speaker/desktop/image-gallery-1.jpg'
@@ -31,7 +33,11 @@ const ZX7 = (props) => {
 
             <div className="headphones-row-one">
                 <div className="img-container">
-                    <img src={ZX7image} alt="" />
+                    <picture>
+                        <source media="(min-width:799px)" srcset={ZX7Desktop}></source>
+                        <source media="(min-width:481px)" srcset={ZX7Tablet}></source>
+                        <img src={ZX7Mobile} alt="" />
+                    </picture>
                 </div>
                 <div className="about-xx99">
                     <p className="xx99-product-name">ZX7 speaker</p>

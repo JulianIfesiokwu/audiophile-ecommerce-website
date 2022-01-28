@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import YX1image from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
+import YX1Mobile from "../../assets/product-yx1-earphones/mobile/image-product.jpg";
+import YX1Tablet from "../../assets/product-yx1-earphones/tablet/image-product.jpg";
+import YX1Desktop from "../../assets/product-yx1-earphones/desktop/image-product.jpg";
 import ProductCategory from "../../Components/Product-Category/ProductCategory.component";
 import AudioGear from "../../Components/Audio-Gear/AudioGear.component";
 import imageOne from '../../assets/product-yx1-earphones/desktop/image-gallery-1.jpg'
@@ -30,7 +32,11 @@ const YX1 = (props) => {
 
             <div className="headphones-row-one">
                 <div className="img-container">
-                    <img src={YX1image} alt="" />
+                    <picture>
+                        <source media="(min-width:800px)" srcset={YX1Desktop}></source>
+                        <source media="(min-width:481px)" srcset={YX1Tablet}></source>
+                        <img src={YX1Mobile} alt="" />
+                    </picture>
                 </div>
                 <div className="about-xx99">
                     <p className="xx99-product-name">YX1 WIRELESS EARPHONES</p>

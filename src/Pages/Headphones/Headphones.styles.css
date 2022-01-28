@@ -86,8 +86,27 @@
         padding: 2rem;
     }
 
-    .headphones-row-one, .headphones-row-two, .headphones-row-three {
+    .headphones-row-one, .headphones-row-three {
         flex-direction: column;
+    }
+
+    .headphones-row-two {
+        flex-direction: column-reverse;
+    }
+
+    .about-xx99, .about-xx59 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .xx99-product-name, .xx99m1-product-name, .xx59-product-name {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .xx99-product-details, .xx99m1-product-details, .xx59-product-details {
+        width: 70%;
+        margin: 1rem auto;
     }
     
 }

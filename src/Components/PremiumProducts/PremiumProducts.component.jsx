@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import earphone from '../../assets/home/desktop/image-earphones-yx1.jpg';
-import earphoneTablet from '../../assets/home/tablet/image-earphones-yx1.jpg';
-import zx9Speaker from '../../assets/home/desktop/image-speaker-zx9.png';
+import YX1Mobile from '../../assets/home/mobile/image-earphones-yx1.jpg';
+import YX1Tablet from '../../assets/home/tablet/image-earphones-yx1.jpg';
+import YX1Desktop from '../../assets/home/desktop/image-earphones-yx1.jpg';
+import zx9Mobile from '../../assets/home/mobile/image-speaker-zx9.png';
+import zx9Tablet from '../../assets/home/tablet/image-speaker-zx9.png';
+import zx9Desktop from '../../assets/home/desktop/image-speaker-zx9.png';
 
 import './PremiumProducts.styles.css';
 
@@ -11,7 +14,9 @@ const PremiumProducts = () => {
         <div className="premium-products">
             <div className="zx9-speaker">
                 <div className="large-image">
-                    <img src={zx9Speaker} alt="speaker" />
+                    <source media="(min-width:800px)" srcset={zx9Desktop}></source>
+                    <source media="(min-width:481px)" srcset={zx9Tablet}></source>
+                    <img src={zx9Mobile} alt="speaker" />
                 </div>
                 
                 <div className="zx9-details">
@@ -36,8 +41,9 @@ const PremiumProducts = () => {
             <div className="earphones">
                 <div className="earphone-image">
                     <picture>
-                        <source media="(min-width:481px)" srcset={earphoneTablet}></source>
-                        <img src={earphone} alt=""/>
+                        <source media="(min-width:800px)" srcset={YX1Desktop}></source>
+                        <source media="(min-width:481px)" srcset={YX1Tablet}></source>
+                        <img src={YX1Mobile} alt=""/>
                     </picture>
                 </div>
 

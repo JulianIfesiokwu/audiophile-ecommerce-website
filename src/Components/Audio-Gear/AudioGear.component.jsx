@@ -1,6 +1,7 @@
 import React from "react";
-import audioPhoto from "../../assets/shared/desktop/image-best-gear.jpg";
+import audioPhotoMobile from "../../assets/shared/mobile/image-best-gear.jpg";
 import audioPhotoTablet from "../../assets/shared/tablet/image-best-gear.jpg";
+import audioPhotoDesktop from "../../assets/shared/desktop/image-best-gear.jpg";
 
 import './AudioGear.styles.css';
 
@@ -17,8 +18,9 @@ const AudioGear = () => {
             </div>
             <div className="audio-gear-photo">
                 <picture>
+                <source media="(min-width: 800px)" srcSet={audioPhotoDesktop}></source>
                 <source media="(min-width: 481px)" srcSet={audioPhotoTablet}></source>
-                <img src={audioPhoto} alt="" />
+                <img src={audioPhotoMobile} alt="" />
                 </picture>
                 
             </div>
