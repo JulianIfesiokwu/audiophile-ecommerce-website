@@ -18,6 +18,8 @@ const Navigation = (props) => {
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
     // hamburger menu
     const [dropdown, setDropdown] = useState(false)
+    // disable button if cart is empty
+    // const disable = {cartItems.length > 0}
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
     const grandTotal = Math.round( itemsPrice )
@@ -102,7 +104,8 @@ const Navigation = (props) => {
             
             <Link to="/checkout">
                 <button className="checkout-btn"
-                onClick={() => () => setModalIsOpen(true)}
+                disabled={cartItems.length < 1}
+                onClick={() => setModalIsOpen(true) }
                 >
                 checkout
                 </button>

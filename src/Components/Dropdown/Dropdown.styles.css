@@ -6,9 +6,10 @@
         top: 5rem;
         right: 0;
         gap: 3%;
-        padding: 4rem 2rem;
+        padding: 4rem 2rem 2rem 2rem;
         width: 100%;
         background-color: white;
+        border-radius: 0 0 8px 8px;
     }
 }
 

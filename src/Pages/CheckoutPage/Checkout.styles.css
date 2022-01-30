@@ -213,6 +213,10 @@ input[type=radio]{
     margin-bottom: 2rem;
 }
 
+.back-checkout:hover {
+    color: #d87d4a;
+}
+
 .first-item {
     border-bottom: 1px solid black;
     display: flex;
@@ -278,6 +282,49 @@ input[type=radio]{
     font-size: 18px;
     font-weight: bold;
     color: #FFF;
+}
+
+.about-cash-on-delivery {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 30%;
+    text-align: center;
+}
+
+.img-container img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.details-cash-on-delivery {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+@media (max-width: 799px) {
+
+    .checkout {
+        padding: 2rem;
+    }
+
+    .billing-details {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .checkout-information {
+        flex-direction: column;
+    }
+
+    .summary {
+        width: 100%;
+    }
+    
 }
 
 @media (max-width:479px) {
