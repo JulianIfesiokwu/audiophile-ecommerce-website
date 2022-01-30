@@ -1,7 +1,7 @@
 import Navigation from './Components/Navigation/Navigation.component';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import  shopProducts from './data.js';
+// import  shopProducts from './data.js';
 
 import Homepage from './Pages/Homepage.component';
 import Footer from './Components/Footer/Footer.component';
@@ -25,7 +25,7 @@ import './App.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const { products } = shopProducts
+  // const { products } = shopProducts
 
   const onAdd = (product) => {
     const exist = cartItems.find(x => x.id === product.id)

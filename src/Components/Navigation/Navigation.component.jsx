@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavList from "../NavList/Navlist.component";
 import Modal from "react-modal";
+import Dropdown from "../Dropdown/Dropdown.component";
 
 import './Navigation.styles.css';
 
@@ -13,14 +14,22 @@ Modal.setAppElement('#root');
 
 const Navigation = (props) => {
     const { cartItems, onAdd, onRemove, removeAll } = props;
+    // Cart modal
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
+    // hamburger menu
+    const [dropdown, setDropdown] = useState(false)
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
     const grandTotal = Math.round( itemsPrice )
 
     return (
         <div className="navigation">
-            <img className="hamburger-icon" src={HamburgerIcon} alt="" />
+            <div className="hamburger-container">
+                <img 
+                onClick={() => setDropdown(!dropdown)}
+                className="hamburger-icon" 
+                src={HamburgerIcon} alt="" />
+            </div>
             <img src={logo} alt="logo" className="logo"/>
             <NavList />
             <img
@@ -93,17 +102,14 @@ const Navigation = (props) => {
             
             <Link to="/checkout">
                 <button className="checkout-btn"
-                onClick={() => {
-                    setModalIsOpen(false)
-                    // console.log(cartItems)
-                }
-                }
+                onClick={() => () => setModalIsOpen(true)}
                 >
                 checkout
                 </button>
             </Link>           
             
-            </Modal>    
+            </Modal>
+            {dropdown && <Dropdown setDropdown={setDropdown} dropdown={dropdown} />    }
             
         </div>
     )

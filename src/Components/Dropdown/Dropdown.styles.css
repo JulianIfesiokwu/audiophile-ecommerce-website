@@ -1,0 +1,28 @@
+@media (max-width: 799px) {
+    .dropdown-container {        
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        gap: 3%;
+        padding: 4rem 2rem;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding: 2rem;
+        background-color: #FFF;
+        top: 50%;
+        top: 5rem;
+        left: 0;
+        border-radius: 0 0 8px 8px;
+        z-index: 3;
+    }
+}

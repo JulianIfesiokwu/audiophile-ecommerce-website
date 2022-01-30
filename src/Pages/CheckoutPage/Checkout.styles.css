@@ -153,18 +153,10 @@ input[type=radio]{
     padding: 1rem;
 }
 
-.order-approved-icon {
-    margin-bottom: 1rem;
-}
-
 .notification {
     margin-bottom: 1rem;
     font-size: 15px;
     line-height: 25px;
-}
-
-.confirmation-title {
-    margin-bottom: 1rem;
 }
 
 .back-home {
@@ -180,7 +172,7 @@ input[type=radio]{
 
 .confirmation-body {
     background-color: white;
-    width: 30%;
+    width: 40%;
     min-height: 150px;
     position: absolute;
     left: 50%;
@@ -221,15 +213,57 @@ input[type=radio]{
     margin-bottom: 2rem;
 }
 
+.first-item {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-line {
+    display: flex;
+}
+
+.first-item-name {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.first-item-price {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.first-qty {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.short-detail {
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 2rem;
+}
+
+.other-items {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-weight: 12px;
+    letter-spacing: -0.21px;
+}
+
 .order-summary {
-    /* border-radius: 8px; */
+    background-color: #979797;
+    border-radius: 8px;
 }
 
 .grand-total-confirm {
     background-color: #000;
     padding: 1rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-radius: 0 0 8px 8px;
 }
 
 .all-added {

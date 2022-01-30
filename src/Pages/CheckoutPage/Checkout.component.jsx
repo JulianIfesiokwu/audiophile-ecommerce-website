@@ -10,7 +10,8 @@ const Checkout =  (props) => {
 
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
     const vat = Math.round( (itemsPrice * 0.2).toFixed(2) )
-    const grandTotal = Math.round( (50) + itemsPrice + vat )
+    const shipping = cartItems.length < 1 ? `0` : `50`
+    const grandTotal = Math.round( +shipping + itemsPrice + vat )
     
     const navigate = useNavigate();
     const [ modalIsOpen, setModalIsOpen ] = useState(false)
@@ -115,6 +116,7 @@ const Checkout =  (props) => {
                     <div className="product-summary">
                         {cartItems.map((cartItem) => (
                             <div key ={cartItem.id} className="item">
+
                                 <div className="row">
                                     <div className="col-1">
                                         <div className="cart-item-img">
@@ -126,20 +128,20 @@ const Checkout =  (props) => {
                                         </div>
                                     </div>
                                     <p className="total-quantity">x{cartItem.qty}</p>
-                                </div>
-                                
-                                
+                                </div>      
                             </div>
                         ))}</div>
 
                     <div className="">
                         <div className="total-cost">
                             <p className="price-details">total</p>
-                            <p className="cost">${itemsPrice}</p>
+                            <p className="cost">$ {itemsPrice}</p>
                         </div>
                         <div className="total-cost">
                             <p className="price-details">shipping</p>
-                            <p className="cost">$50</p>
+                            <p className="cost">$ {
+                                cartItems.length < 1 ? `0` : `50`
+                            }</p>
                         </div>
                         <div className="total-cost">
                             <p className="price-details">vat (included)</p>
@@ -180,11 +182,22 @@ const Checkout =  (props) => {
                     <h2 className="confirmation-title">THANK YOU <br/>FOR YOUR ORDER</h2>
                     <p className="notification">You will receive an email confirmation shortly.</p>
                     <div className="order-summary">
-                        <div className="first-item">
-                            {console.log(cartItems[0])}
-                            {cartItems[0].img}
-                        </div>
-                        <div className="other-items"></div>
+                            <div className="short-detail">
+                                {/* <div className="first-item">
+                                    <div className="first-line">
+                                        <div>{cartItems[0].img}</div>
+                                        <div>
+                                            <p className="first-item-name">{cartItems[0].name}</p>
+                                            <p className="first-item-price">$ {cartItems[0].price}</p>
+                                        </div>
+                                    </div>
+                                    <div className="first-qty">x{cartItems[0].qty}</div>
+                                </div> */}
+                                <div className="other-items">
+                                    <p>and {cartItems.length - 1} other item(s)</p>
+                                </div>
+                            </div>                        
+
                         <div className="grand-total-confirm">
                             <p className="all-added">grand total</p>
                             <p className="max-amount">$ {grandTotal}</p>

@@ -4,6 +4,7 @@
     text-align: center;
     cursor: pointer;
     padding-bottom: 2rem;
+    min-height: 200px;
 }
 
 .link-image {
@@ -35,5 +36,13 @@
 @media (max-width: 480px) {
     .product-link {
         margin-bottom: 4rem;
+        min-height: 160px;
+    }    
+}
+
+@media (max-width: 799px) {
+    .product-link {
+        margin-bottom: 4rem;
+        min-height: 140px;
     }    
 }

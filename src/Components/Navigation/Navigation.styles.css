@@ -9,7 +9,7 @@
     border-bottom: 1px solid #333333;
 }
 
-.hamburger-icon {
+.hamburger-container {
     display: none;
 }
 
@@ -177,7 +177,7 @@
         justify-content: initial;
     }
 
-    .hamburger-icon {
+    .hamburger-container {
         display: block;
         margin-right: 2rem;
     }
@@ -198,7 +198,7 @@
         padding: 2rem;
     }
 
-    .hamburger-icon {
+    .hamburger-container {
         display: block;
     }
 
