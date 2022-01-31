@@ -75,8 +75,9 @@
 
 .empty {
     text-align: center;
-    margin-bottom: 2rem;
     font-weight: bold;
+    width: 70%;
+    margin: 1rem auto;
     
 }
 

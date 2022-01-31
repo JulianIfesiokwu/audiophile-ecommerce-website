@@ -50,8 +50,13 @@ const Checkout =  (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        validateEmail(email)
     }
+
+    const validateEmail = (email) => {
+        const  mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        email.match(mailformat) ?  alert("Valid email address!") : alert("You have entered an invalid email address!")
+    }   
 
     return (
 
@@ -176,7 +181,7 @@ const Checkout =  (props) => {
                                             </div>                                            
                                         </div>
                                         <div className="about-cash-on-delivery">
-                                            <div className="img-container">
+                                            <div className="img-container-2">
                                                 <img src={CashImage} alt="" />
                                             </div>
                                             <p className="details-cash-on-delivery">
@@ -266,7 +271,7 @@ const Checkout =  (props) => {
                     <h2 className="confirmation-title">THANK YOU <br/>FOR YOUR ORDER</h2>
                     <p className="notification">You will receive an email confirmation shortly.</p>
                     <div className="order-summary">
-                            {/* <div className="short-detail">
+                            <div className="short-detail">
                                 <div className="first-item">
                                     <div className="first-line">
                                         <div>{cartItems[0].img}</div>
@@ -280,7 +285,7 @@ const Checkout =  (props) => {
                                 <div className="other-items">
                                     <p>and {cartItems.length - 1} other item(s)</p>
                                 </div>
-                            </div>                         */}
+                            </div>                        
 
                         <div className="grand-total-confirm">
                             <p className="all-added">grand total</p>

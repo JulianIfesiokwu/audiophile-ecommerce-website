@@ -12,6 +12,10 @@
     background-color: #D87D4A;
     border-radius: 8px;
     overflow: hidden;
+    background-image: url(../../assets/home/desktop/pattern-circles.svg);
+    background-position: 2% 10%;
+    background-repeat: no-repeat;
+    background-size: 55%;
 }
 
 .large-image {
@@ -19,7 +23,7 @@
 }
 
 .large-image img {
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 
@@ -141,6 +145,10 @@
         height: auto;
         justify-content: center;
         align-items: center;
+        background-color: #D87D4A;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 145%;
     }
 
     .large-image {
@@ -194,6 +202,9 @@
         flex-direction: column;
         text-align: center;
         height: auto;
+        background-position: 50% -550%;
+        background-repeat: no-repeat;
+        background-size: 145%;
     }
 
     .large-image {

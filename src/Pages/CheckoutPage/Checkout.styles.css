@@ -291,12 +291,12 @@ input[type=radio]{
     align-items: center;
 }
 
-.img-container {
+.img-container-2 {
     width: 30%;
     text-align: center;
 }
 
-.img-container img {
+.img-container-2 img {
     width: 60%;
     margin: 0 auto;
 }
