@@ -44,7 +44,7 @@ const XX59 = (props) => {
                     <picture>
                         <source media="(min-width:799px)" srcSet={xx59Desktop}></source>
                         <source media="(min-width:481px)" srcSet={xx59Tablet}></source>
-                        <img src={xx59Desktop} alt="" />
+                        <img src={xx59Mobile} alt="" />
                     </picture>
                 </div>
                 <div className="about-xx99">

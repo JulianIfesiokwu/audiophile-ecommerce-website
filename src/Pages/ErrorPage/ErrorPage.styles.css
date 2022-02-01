@@ -13,3 +13,9 @@
     line-height: 38px;
     letter-spacing: 2px;
 }
+
+@media (max-width: 480px) {
+    .error {
+        padding: 4rem;
+    }
+}
