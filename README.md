@@ -1,4 +1,5 @@
 # audiophile-ecommerce-website
+
 An ecommerce website built using react
 
 # Frontend Mentor - E-commerce product page solution
@@ -30,6 +31,10 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
+### Screenshot
+
+![](./src/assets/Audiophile-Website.png)
+
 ### Links
 
 - Solution URL: [https://github.com/JulianIfesiokwu/audiophile-ecommerce-website]
@@ -51,45 +56,46 @@ styles for components
 - React modal library
 
 ### What I learned
- I learnt quite a lot on the project. This is my first completed react project and I learnt a vast amount which I cannot list
- everything here. I will try my best though.
+
+I learnt quite a lot on the project. This is my first completed react project and I learnt a vast amount which I cannot list
+everything here. I will try my best though.
 
 - How to add a google font to a react app
-[https://blog.greenroots.info/3-quick-ways-to-add-fonts-to-your-react-app]
-I used the first style of adding the link tags to the head of the index.html, then
-I added a css rule to the app.css file.
+  [https://blog.greenroots.info/3-quick-ways-to-add-fonts-to-your-react-app]
+  I used the first style of adding the link tags to the head of the index.html, then
+  I added a css rule to the app.css file.
 
 - Learnt how to import images in react covered in the link
-[https://create-react-app.dev/docs/adding-images-fonts-and-files/]
+  [https://create-react-app.dev/docs/adding-images-fonts-and-files/]
 
 - Learnt how to stop child flex items from being full width
-[https://stackoverflow.com/questions/41694559/stop-flex-child-from-being-full-width]
+  [https://stackoverflow.com/questions/41694559/stop-flex-child-from-being-full-width]
 
 -Learnt how to import svgs in react
 [https://create-react-app.dev/docs/adding-images-fonts-and-files/]
 
 - Learnt how to use react router
-[https://reactrouter.com/docs/en/v6/getting-started/tutorial]
-STEPS
+  [https://reactrouter.com/docs/en/v6/getting-started/tutorial]
+  STEPS
+
 1. import { BrowserRouter } from 'react-router-dom': This is done in your index.js
-The BrowserRouter component is then used to wrap the app component like below:
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+   The BrowserRouter component is then used to wrap the app component like below:
+   <BrowserRouter>
+   <App />
+   </BrowserRouter>
 
 2. We import Link to our App component.
-import { Link } from "react-router-dom";
-This will give control of the URL to react router.Anytime a link is clicked the url
-will change to whatever string you added to the "to" attribute in the link tag.
+   import { Link } from "react-router-dom";
+   This will give control of the URL to react router.Anytime a link is clicked the url
+   will change to whatever string you added to the "to" attribute in the link tag.
 
 - How to scroll to top when a link is clicked
-[https://stackoverflow.com/questions/70193712/how-to-scroll-to-top-on-route-change-with-react-router-dom-v6]
-[https://www.youtube.com/watch?v=8c5eMyJR9Js]
-
+  [https://stackoverflow.com/questions/70193712/how-to-scroll-to-top-on-route-change-with-react-router-dom-v6]
+  [https://www.youtube.com/watch?v=8c5eMyJR9Js]
 
 - Static images should be stored in the public folder
-see this important resource
-[https://daveceddia.com/react-image-tag/]
+  see this important resource
+  [https://daveceddia.com/react-image-tag/]
 
 [https://sebhastian.com/react-disable-button/]
 
@@ -103,16 +109,17 @@ see this important resource
 
 [https://www.c-sharpcorner.com/article/how-to-deploy-react-application-on-github-pages/]
 
-I learnt to use 
+I learnt to use
+
 - styled components: a react library to help in organising and keeping my css contained.
 - Working on a part of the project and completing it before going to another part of the project.
 - Static images are stored in the public folder in react projects.
--How to use the useState Hook. This was my first time using Hooks and I saw how important they can be.
--How to pass methods and state between components. Here I put shared methods and passed them into the components in the 
-app.js. I have never done this before and this helped me understand react's uni-directional flow whereby state flows from the
-parent to the child component.
+  -How to use the useState Hook. This was my first time using Hooks and I saw how important they can be.
+  -How to pass methods and state between components. Here I put shared methods and passed them into the components in the
+  app.js. I have never done this before and this helped me understand react's uni-directional flow whereby state flows from the
+  parent to the child component.
 - react modal library. This awesome resource made it very easy for me to create and use a modal in my react application.
-Highly recommended.
+  Highly recommended.
 
 ### Continued development
 
@@ -141,4 +148,3 @@ I will also use styled components and some other UI librarys to help keep my CSS
 
 - Frontend Mentor - [https://www.frontendmentor.io/profile/JulianIfesiokwu]
 - Twitter - [https://twitter.com/mrjules07]
-
